@@ -1,3 +1,14 @@
+<?php
+    session_start();
+
+    if( !isset($_SESSION["correo"])){
+        header("location:../LoginAdmin.html");
+    }else{
+        //La sesion existe SSI pasó por el login y los datos fueron correctos
+        $correo = $_SESSION["correo"];
+        //echo "<a href='./cerrarSesion.php?nombreSesion=boleta'>Cerrar Sesi&oacute;n</a>";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,7 +114,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="../php/cerrarSesion.php?nombreSesion=correo">Logout</a>
         </div>
       </div>
     </div>
@@ -129,3 +140,4 @@
 </body>
 
 </html>
+<?php } ?>
