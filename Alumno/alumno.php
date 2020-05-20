@@ -27,7 +27,7 @@
   <div id="wrapper">
 
 
-        <?php include("../sidebar_Alumno.php"); ?>
+        <?php include("../Admin/sidebar.php"); ?>
 
 
     <!-- Content Wrapper -->
@@ -37,7 +37,7 @@
       <div id="content">
 
 
-            <?php include("../topbar.php"); ?>
+            <?php include("../Admin/topbar.php"); ?>
 
 
         <!-- Begin Page Content -->
@@ -79,7 +79,7 @@
 
       </div>
       <!-- End of Page Wrapper -->
-<?php include("../footer.php"); ?>
+<?php include("../Admin/footer.php"); ?>
       <!-- Scroll to Top Button-->
       <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
