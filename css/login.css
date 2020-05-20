@@ -1,41 +1,37 @@
-#imagen{
+.error {
+    color: red;
+}
+
+.c1 {
+    border: 2px red ridge;
+}
+
+.c2 {
+    border: 2px limegreen ridge;
+}
+
+.row {
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 0;
+}
+
+
+#regresar{
+    margin-top: 2.5%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+/*button{
+    width: 25px;
+}*/
+/*//////////////////////////////////////////////*/
+.imagen{
     background: linear-gradient(135deg, blue 0%, #0090f7 50%);
     
 }
-.banner .info {
-    margin-top: 15%;
-    transform: translateY(-15%);
-}
-
-.banner .info h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: white;
-    letter-spacing: 2px;
-}
-
-.banner .info p {
-    font-size: 2em;
-    font-weight: 500;
-    color: white;
-    letter-spacing: 2px;
-}
-
-.banner .info a {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    background-color:#0866FF ;
-    padding: 10px 20px;
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-.banner .info a:hover {
-    /*background-color: dodgerblue;*/
-}
-
-
 #main-header {
     background: #333;
     color: white;
@@ -56,7 +52,7 @@
 }
 
 #logo-header:hover {
-    color: #0080FF;
+    color: #0b76a6;
 }
 
 #logo-header .site-name {
@@ -69,7 +65,7 @@
     display: block;
     font-weight: 300;
     font-size: 0.8em;
-    color: white;
+    color: #999;
 }
 
 
@@ -99,5 +95,5 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #0080FF;
+    background: #0b76a6;
 }
