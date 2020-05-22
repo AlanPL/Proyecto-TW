@@ -22,4 +22,5 @@
     }else{
         header("location: ../LoginAdmin.html");
     }
+    $con->close();
 ?>

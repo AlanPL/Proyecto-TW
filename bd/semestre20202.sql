@@ -59,6 +59,7 @@ CREATE TABLE `alumno` (
   `fechaNac` date DEFAULT NULL,
   `contrasena` varchar(32) NOT NULL,
   `auditoria` datetime NOT NULL,
+  `estado` varchar(45) NOT NULL,
   PRIMARY KEY (`boleta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -81,9 +82,9 @@ DROP TABLE IF EXISTS `horario`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `horario` (
   `boleta` varchar(10) NOT NULL,
-  `Id_materia` varchar(10) NOT NULL,
+  `Id_materia` int NOT NULL,
   KEY `boleta` (`boleta`),
-  KEY `Id_materia` (`Id_materia`),
+  KEY `horario_ibfk_2_idx` (`Id_materia`),
   CONSTRAINT `horario_ibfk_1` FOREIGN KEY (`boleta`) REFERENCES `alumno` (`boleta`),
   CONSTRAINT `horario_ibfk_2` FOREIGN KEY (`Id_materia`) REFERENCES `materia` (`Id_materia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -106,11 +107,11 @@ DROP TABLE IF EXISTS `materia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `materia` (
-  `Id_materia` varchar(10) NOT NULL,
-  `Materia` varchar(40) NOT NULL,
+  `Id_materia` int NOT NULL AUTO_INCREMENT,
+  `Nombre` varchar(40) NOT NULL,
   `Nivel` varchar(10) NOT NULL,
   PRIMARY KEY (`Id_materia`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,6 +120,7 @@ CREATE TABLE `materia` (
 
 LOCK TABLES `materia` WRITE;
 /*!40000 ALTER TABLE `materia` DISABLE KEYS */;
+INSERT INTO `materia` VALUES (12,'k','g'),(13,'f','f'),(14,'s','s'),(15,'d','d'),(16,'e','e'),(17,'d','d'),(18,'df',''),(19,'','sds'),(20,'s','d'),(21,'x','dsgf');
 /*!40000 ALTER TABLE `materia` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -131,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-20 18:13:37
+-- Dump completed on 2020-05-22 12:36:40

@@ -59,6 +59,9 @@
                         case "AgregarAlumno":
                           include("AgregarAlumno.php");
                           break;
+                        case "AgregarMateria":
+                            include("AgregarMateria.php");                            
+                          break;
                         case "EditarAlumno":
                           include("EditarAlumno.php");
                           break;
