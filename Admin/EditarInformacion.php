@@ -1,4 +1,11 @@
-
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    if( !isset($_SESSION["correo"])){
+        header("location:../LoginAdmin.html");
+    }
+?>
           <!-- Page Heading -->
           <div class="row mb-4">
             <div class="col-sm-10">

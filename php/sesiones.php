@@ -9,6 +9,9 @@
     $correo = $_POST["correo"];
     $contrasenia = $_POST["contrasenia"];
 
+    $resp = [];
+
+
     $consulta = $con->prepare('SELECT * FROM admin WHERE correo = ? AND contrasena= ?');
     $consulta -> bind_param('ss', $correo, $contrasenia);
 
@@ -18,9 +21,17 @@
     if($row = $result->fetch_assoc()){
 
         $_SESSION["correo"] = $correo;
-        header("location:../Admin/admin.php");
+
+        $resp["code"] = 1;
+        $resp["redirect"] = "./Admin/admin.php";
+        $respAX = json_encode($resp);
+        echo $respAX;
     }else{
-        header("location: ../LoginAdmin.html");
+        
+        $resp["code"] = 0;
+        $resp["redirect"] = "./LoginAdmin.html";
+        $respAX = json_encode($resp);
+        echo $respAX;
     }
     $con->close();
 ?>

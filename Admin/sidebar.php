@@ -1,4 +1,11 @@
-
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    if( !isset($_SESSION["correo"])){
+        header("location:../LoginAdmin.html");
+    }
+?>
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -15,9 +22,9 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item active">
-        <a class="nav-link" href="admin.php?page=UnidadesAprendizaje">
+        <a class="nav-link" href="admin.php?page=Estadisticas">
           <i class="fas fa-fw fa-table"></i>
-          <span>Unidades de Aprendizaje</span></a>
+          <span>Estadisticas</span></a>
       </li>
 
 
@@ -29,6 +36,14 @@
         <a class="nav-link" href="admin.php?page=InfoAlumnos">
           <i class="fas fa-users"></i>
           <span>Alumnos</span></a>
+      </li>
+
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="admin.php?page=InfoUnidadesAprendizaje">
+          <i class="fas fa-users"></i>
+          <span>Unidades de Aprendizaje</span></a>
       </li>
 
 

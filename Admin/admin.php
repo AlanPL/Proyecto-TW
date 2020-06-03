@@ -7,6 +7,7 @@
         //La sesion existe SSI pasó por el login y los datos fueron correctos
         $correo = $_SESSION["correo"];
         //echo "<a href='./cerrarSesion.php?nombreSesion=boleta'>Cerrar Sesi&oacute;n</a>";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +26,17 @@
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="../css/notify.css" rel="stylesheet">
+  <script src="../js/jquery-3.5.0.min.js"></script>
+  <!-- Bootstrap core JavaScript-->  
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -60,7 +69,7 @@
                           include("AgregarAlumno.php");
                           break;
                         case "AgregarMateria":
-                            include("AgregarMateria.php");                            
+                            include("AgregarMateria.php");
                           break;
                         case "EditarAlumno":
                           include("EditarAlumno.php");
@@ -71,17 +80,20 @@
                         case "InfoAlumnos":
                           include("InfoAlumnos.php");
                           break;
+                        case "InfoUnidadesAprendizaje":
+                          include("InfoUnidadesAprendizaje.php");
+                          break;
                         case "dashboard":
                           include("dashboard.php");
                           break;
-                        case "UnidadesAprendizaje":
-                          include("UnidadesAprendizaje.php");
+                        case "Estadisticas":
+                          include("Estadisticas.php");
                           break;
                         default:
-                          include("UnidadesAprendizaje.php");
+                          include("Estadisticas.php");
                     }
                 }else{
-                    include("UnidadesAprendizaje.php");
+                    include("Estadisticas.php");
                 }
 
                 ?>
@@ -123,12 +135,11 @@
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<script src="../js/notify.js"></script>
+
+
 
   <!-- Custom scripts for all pages-->
   <script src="../js/sb-admin-2.min.js"></script>
@@ -143,4 +154,3 @@
 </body>
 
 </html>
-<?php } ?>

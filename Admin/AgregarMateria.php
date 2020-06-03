@@ -1,23 +1,17 @@
-
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    if( !isset($_SESSION["correo"])){
+        header("location:../LoginAdmin.html");
+    }
+?>
           <!-- Page Heading -->
           <div class="row mb-4">
             <div class="col-sm-9">
-              <h1 class="h3 mb-2 text-gray-800">Agregar Materia</h1><br>
+              <h1 class="h3 mb-2 text-gray-800">Agregar Unidad de Aprendizaje</h1><br>
             </div>
             <div class="col-sm-3">
-                <?php
-                  if (isset($_GET["success"])) {
-                      if ($_GET["success"] == "true") {?>
-                          <div class="alert alert-success">
-                            <strong>Materia Agregada!</strong>
-                          </div>
-
-                      <?php  }else{?>
-                          <div class="alert alert-danger">
-                            <strong>No se pudo agregar la materia :(</strong>
-                          </div>
-                      <?php }
-                  }?>
             </div>
 
           </div>
@@ -34,9 +28,10 @@
                       <div class="col-lg-6">
                         <div class="p-5">
                           <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Materia</h1>
+                            <h1 class="h4 text-gray-900 mb-4">Unidad de Aprendizaje</h1>
                           </div>
-                          <form class="user" method="POST" action="../php/crudAdmin.php?func=AgregarMateria">
+                          <form class="user" method="POST" id="formAgregarMateria" >
+                                <input name="func" type="hidden" value="AgregarMateria">
                                 <div class="form-group">
                                   <input type="text" class="form-control form-control-user" name="nombre" placeholder="Nombre">
                                 </div>
@@ -55,3 +50,4 @@
                 </div>
               </div>
             </div>
+<script src="../js/AdminJS/AgregarMateriaJS.js"></script>

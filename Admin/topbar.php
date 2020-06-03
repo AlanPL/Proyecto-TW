@@ -1,3 +1,11 @@
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    if( !isset($_SESSION["correo"])){
+        header("location:../LoginAdmin.html");
+    }
+?>
 <!-- Topbar -->
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 

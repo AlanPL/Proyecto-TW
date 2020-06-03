@@ -1,16 +1,19 @@
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    if( !isset($_SESSION["correo"])){
+        header("location:../LoginAdmin.html");
+    }
+?>
 <?php include '../php/statsAdmin.php' ?>
 <!-- Page Heading -->
 <div class="row mb-4">
   <div class="col-sm-10">
-    <h1 class="h3 mb-2 text-gray-800">Unidades De Aprendizaje</h1>
+    <h1 class="h3 mb-2 text-gray-800">Estadisticas</h1>
   </div>
-  <div class="col-sm-1">
-    <a href="admin.php?page=AgregarMateria" class="btn btn-success">
-      <i class="fas fa-user"></i>
-      Agregar Materia
-    </a>
-
-  </div>
+  <div class="col-sm-1"></div>
+  
   <div class="col-sm-1">
     <a href="#" class=" btn btn-primary ">
       <i class="fas fa-download  "></i>
