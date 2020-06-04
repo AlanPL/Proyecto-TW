@@ -1,4 +1,3 @@
-
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -8,20 +7,14 @@
       <!-- Main Content -->
       <div id="content">
           
-                      <script type="text/javascript">
-            
-                          
-                          
-            </script>
-          
         <div class="container-fluid">
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Materias</h1>
           </div>
-              <p>Selecciona las materias que te interesen meter para el próximo semestre, recuerda que solo puedes inscribir un máximo de 7 materias</p>
-           <div class="row">
+          <p>Selecciona las materias que te interesen meter para el próximo semestre, recuerda que solo puedes inscribir un máximo de 7 materias</p>
+          <div class="row">
             <div class="col-lg-4">
                <form name="formulario2">
                     <h4>Materias seleccionadas: <input type="text" id="cajaTexto" class="texto" value="0" > / 7</h4>
@@ -31,47 +24,47 @@
                 </div>
                 
           </div>-->
-                    </form></div>
+                </form></div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4">
-                <form name="formulario3">
+              <form name="formulario3">
                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ConfirmacionRegistro">
                     <button href="#" id="boton"  class="btn btn-success btn-icon-split" disabled>
-                    <span class="icon text-white-50">
-                      <i class="fas fa-check"></i>
-                    </span>
-                    <span class="text" data-toggle="modal" data-target="#ConfirmacionRegistro">Enviar Registro</span>
-                  </button></a></form>
+                      <span class="icon text-white-50">
+                        <i class="fas fa-check"></i>
+                      </span>
+                      <span class="text" data-toggle="modal" data-target="#ConfirmacionRegistro">Enviar Registro</span>
+                    </button></a></form>
             </div>
-            </div>
+          </div>
 
                           <!-- Envio de Registro-->
-  <div class="modal fade" id="ConfirmacionRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">¿Todo listo?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body" align="center">Esta acci&oacute;n no se puede deshacer<br>¿Seguro que ya acabaste?</div>
+          <div class="modal fade" id="ConfirmacionRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">¿Todo listo?</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body" align="center">Esta acci&oacute;n no se puede deshacer<br>¿Seguro que ya acabaste?</div>
           
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="registro_completo.php">S&iacute;, enviar</a>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                  <a class="btn btn-primary" href="registro_completo.php">S&iacute;, enviar</a>
+                </div>
+              </div>
+            </div>
+          </div>
             
-              <div class="card shadow mb-4">
+          <div class="card shadow mb-4">
                   
 <!--Primer Nivel-->
                 <div class="card-header py-3">
-                    <nav class="navbar navbar-expand navbar-light bg-light">
+                    <nav class="navbar navbar-expand navbar-light bg-light" onClick="toggleHidden('#primero')">
                         <h6 class="m-0 font-weight-bold text-primary">Primer nivel</h6> 
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" onClick="toggleHidden('#primero')"><!--Titulo opcional para el dropdown-->
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"><!--Titulo opcional para el dropdown-->
                         </a>
                     </nav>
                 </div>
@@ -94,140 +87,257 @@
                                     <input type="checkbox" class="custom-control-input" id="Fisica" name="checkbox5" onClick="validar(checkbox5,0)">    
                                     <label class="custom-control-label" for="Fisica">F&iacute;sica</label><br><br>
                                 </div><div class="custom-control custom-checkbox small">
-                                    <input type="checkbox" class="custom-control-input" id="IngEt" name="checkbox6" onClick="validar(checkbox6,0)">
+                                    <input type="checkbox" class="custom-control-input" id="IngEt" name="checkbox6" onClick="validar('checkbox6',0);">
                                     <label class="custom-control-label" for="IngEt">Ingenier&iacute;a &eacute;tica y sociedad</label>
                                 </div>
                         </div>   
                   </div>
-<!--Segundo Nivel-->                    
-                  <div class="card-header py-3">
-                      <nav class="navbar navbar-expand navbar-light bg-light">
-                  <h6 class="m-0 font-weight-bold text-primary">Segundo nivel</h6>
-                      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" onClick="toggleHidden('#segundo')"><!--Titulo opcional para el dropdown-->
-                      </a>
-                      </nav>
+<!--Segundo Nivel-->      
+                <div class="card-header py-3">
+                  <nav class="navbar navbar-expand navbar-light bg-light" onClick="toggleHidden('#segundo')">
+                    <h6 class="m-0 font-weight-bold text-primary" >Segundo nivel</h6>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"><!--Titulo opcional para el dropdown-->
+                    </a>
+                    </nav>
                 </div>
                 <div class="card-body" id="segundo" hidden="true">
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox small">          
-                            <input type="checkbox" class="custom-control-input" id="EcDif" name="checkbox7" onClick="validar(formulario.checkbox7,0)">
-                            <label class="custom-control-label" for="EcDif">Ecuaciones Diferenciales</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="AlgLin" name="checkbox8" onClick="validar(checkbox8,0)">    
-                            <label class="custom-control-label" for="AlgLin">&Aacute;lgebra lineal</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="CalcApl" name="checkbox9" onClick="validar(checkbox9,0)">
-                            <label class="custom-control-label" for="CalcApl">C&aacute;lculo aplicado</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="EstrDat" name="checkbox10" onClick="validar(checkbox10,0)">
-                            <label class="custom-control-label" for="EstrDat">Estructura de datos</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="ComOral" name="checkbox11" onClick="validar(checkbox11,0)">    
-                            <label class="custom-control-label" for="ComOral">Comunicaci&oacute;n oral y escrita</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="Circuitos" name="checkbox12" onClick="validar(checkbox12,0)">
-                            <label class="custom-control-label" for="Circuitos">An&aacute;lisis fundamental de circuitos</label>
+                    <?php   $nivel=2;
+                    $sql = "select * from `materia` where Nivel='".$nivel."'"; //esta es una tabla q contiene un listado de titulos principales
+                    $res=mysqli_query($conn,$sql) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
+                    $i=0;
+                    while($row = mysqli_fetch_assoc($res)){
+                      $title[$i]=$row["Materia"];
+                      $codtit[$i]=$row["Id_materia"];?>
+                      <?php $sqlx = "select * from materia where Id_materia='".$codtit[$i]."'";
+                      $resx=mysqli_query($conn, $sqlx) or die(mysql_error());
+                      $j=0;
+                      $cero=0;
+                      while($rowx = mysqli_fetch_assoc($resx)){
+                        $item[$j]=$rowx["Materia"];
+                        $coditem[$j]=$rowx["Id_materia"];?>
+                        <div class="custom-control custom-checkbox small">
+                          <input type="checkbox" class="custom-control-input" id="<?php echo $item[$j];?>" name="checkbox" onClick="informarItemsElegidos('checkbox')">           <!--// asignamos el codigo de item-->
+                          <label class="custom-control-label" for="<?php echo $item[$j];?>"><nbsp></nbsp><h6><?php echo $item[$j];?> <!-- imprimimos el nombre del item--></h6><br   /></label>
                         </div>
-                    </div>  
-                </div>
-                  
+                        <?php $j++;
+                      }
+                    mysqli_free_result($resx);  ?> <!-- se libera la consulta-->
+                    <?php $i++;
+                    }
+                  mysqli_free_result($res);?>   
+                </div>                 
 <!--Tercer Nivel-->
                 <div class="card-header py-3">
-                   <nav class="navbar navbar-expand navbar-light bg-light">
+                   <nav class="navbar navbar-expand navbar-light bg-light" onClick="toggleHidden('#tercero')">
                       <h6 class="m-0 font-weight-bold text-primary">Tercer nivel</h6> 
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" onClick="toggleHidden('#tercero')"><!--Titulo opcional para el dropdown-->
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"><!--Titulo opcional para el dropdown-->
                         </a>
                   </nav>
                   </div>
-                    <div class="card-body" id="tercero" hidden="true">
-                                            <div class="form-group">
-                        <div class="custom-control custom-checkbox small">          
-                            <input type="checkbox" class="custom-control-input" id="MatAV" name="checkbox13" onClick="validar(formulario.checkbox13,0)">
-                            <label class="custom-control-label" for="MatAV">Matem&aacute;ticas avanzadas para la ingenier&iacute;a</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="FundEc" name="checkbox14" onClick="validar(checkbox14,0)">    
-                            <label class="custom-control-label" for="FundEc">Fundamentos econ&oacute;micos</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="FundDD" name="checkbox15" onClick="validar(checkbox15,0)">
-                            <label class="custom-control-label" for="FundDD">Fundamentos de dise&ntilde;o digital</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="TeorComp" name="checkbox16" onClick="validar(checkbox16,0)">
-                            <label class="custom-control-label" for="TeorComp">Teor&iacute;a computacional</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="BD" name="checkbox17" onClick="validar(checkbox17,0)">    
-                            <label class="custom-control-label" for="BD">Base de datos</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="POO" name="checkbox18" onClick="validar(checkbox18,0)">
-                            <label class="custom-control-label" for="POO">Programaci&oacute;n orientada a objetos</label><br><br>
-                        </div><div class="custom-control custom-checkbox small">
-                            <input type="checkbox" class="custom-control-input" id="ElecAn" name="checkbox19" onClick="validar(checkbox19,0)">
-                            <label class="custom-control-label" for="ElecAn">Electr&oacute;nica anal&oacute;gica</label>
+                  <div class="card-body" id="tercero" hidden="true">
+                      <!--De aqui...-->
+                    <?php   $nivel=3;
+                    $sql = "select * from `materia` where Nivel='".$nivel."'"; //esta es una tabla q contiene un listado de titulos principales
+                    $res=mysqli_query($conn,$sql) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
+                    $i=0;
+                    while($row = mysqli_fetch_assoc($res)){
+                      $title[$i]=$row["Materia"];
+                      $codtit[$i]=$row["Id_materia"];?>
+                      <?php $sqlx = "select * from materia where Id_materia='".$codtit[$i]."'";
+                      $resx=mysqli_query($conn, $sqlx) or die(mysql_error());
+                      $j=0;
+                      $cero=0;
+                      while($rowx = mysqli_fetch_assoc($resx)){
+                        $item[$j]=$rowx["Materia"];
+                        $coditem[$j]=$rowx["Id_materia"];?>
+                        <div class="custom-control custom-checkbox small">
+                          <input type="checkbox" class="custom-control-input" id="<?php echo $item[$j];?>" name="checkbox" onClick="informarItemsElegidos('checkbox')">           <!--// asignamos el codigo de item-->
+                          <label class="custom-control-label" for="<?php echo $item[$j];?>"><nbsp></nbsp><h6><?php echo $item[$j];?> <!-- imprimimos el nombre del item--></h6><br   /></label>
                         </div>
-                    </div> 
-                    </div>
+                        <?php $j++;
+                      }
+                    mysqli_free_result($resx);  ?> <!-- se libera la consulta-->
+                    <?php $i++;
+                    }
+                  mysqli_free_result($res);?> 
+                  <!--...hasta aqui-->
+                  </div>
 <!--Cuarto Nivel-->                    
                   <div class="card-header py-3">
-                      <nav class="navbar navbar-expand navbar-light bg-light">
-                  <h6 class="m-0 font-weight-bold text-primary">Cuarto nivel</h6>
-                      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" onClick="toggleHidden('#cuarto')"><!--Titulo opcional para el dropdown-->
+                    <nav class="navbar navbar-expand navbar-light bg-light" onClick="toggleHidden('#cuarto')">
+                      <h6 class="m-0 font-weight-bold text-primary">Cuarto nivel</h6>
+                      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"><!--Titulo opcional para el dropdown-->                  
                       </a>
-                      </nav>
-                </div>
-                <div class="card-body" id="cuarto" hidden="true">
-
+                    </nav>
                   </div>
-                  
+                  <div class="card-body" id="cuarto" hidden="true">
+                    <?php   $nivel=4;
+                    $sql = "select * from `materia` where Nivel='".$nivel."'"; //esta es una tabla q contiene un listado de titulos principales
+                    $res=mysqli_query($conn,$sql) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
+                    $i=0;
+                    while($row = mysqli_fetch_assoc($res)){
+                      $title[$i]=$row["Materia"];
+                      $codtit[$i]=$row["Id_materia"];?>
+                      <?php $sqlx = "select * from materia where Id_materia='".$codtit[$i]."'";
+                      $resx=mysqli_query($conn, $sqlx) or die(mysql_error());
+                      $j=0;
+                      $cero=0;
+                      while($rowx = mysqli_fetch_assoc($resx)){
+                        $item[$j]=$rowx["Materia"];
+                        $coditem[$j]=$rowx["Id_materia"];?>
+                        <div class="custom-control custom-checkbox small">
+                          <input type="checkbox" class="custom-control-input" id="<?php echo $item[$j];?>" name="checkbox" onClick="informarItemsElegidos('checkbox')">           <!--// asignamos el codigo de item-->
+                          <label class="custom-control-label" for="<?php echo $item[$j];?>"><nbsp></nbsp><h6><?php echo $item[$j];?> <!-- imprimimos el nombre del item--></h6><br   /></label>
+                        </div>
+                        <?php $j++;
+                      }
+                    mysqli_free_result($resx);  ?> <!-- se libera la consulta-->
+                    <?php $i++;
+                    }
+                  mysqli_free_result($res);?> 
+                  </div>
 <!--Quinto Nivel-->
                 <div class="card-header py-3">
-                   <nav class="navbar navbar-expand navbar-light bg-light">
+                   <nav class="navbar navbar-expand navbar-light bg-light" onClick="toggleHidden('#quinto')">
                       <h6 class="m-0 font-weight-bold text-primary">Quinto nivel</h6> 
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" onClick="toggleHidden('#quinto')"><!--Titulo opcional para el dropdown-->
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"><!--Titulo opcional para el dropdown-->
                         </a>
                   </nav>
                   </div>
                     <div class="card-body" id="quinto" hidden="true">
-                        <input type="checkbox" class="custom-checkbox">dsa
+                    <?php   $nivel=5;
+                    $sql = "select * from `materia` where Nivel='".$nivel."'"; //esta es una tabla q contiene un listado de titulos principales
+                    $res=mysqli_query($conn,$sql) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
+                    $i=0;
+                    while($row = mysqli_fetch_assoc($res)){
+                      $title[$i]=$row["Materia"];
+                      $codtit[$i]=$row["Id_materia"];?>
+                      <?php $sqlx = "select * from materia where Id_materia='".$codtit[$i]."'";
+                      $resx=mysqli_query($conn, $sqlx) or die(mysql_error());
+                      $j=0;
+                      $cero=0;
+                      while($rowx = mysqli_fetch_assoc($resx)){
+                        $item[$j]=$rowx["Materia"];
+                        $coditem[$j]=$rowx["Id_materia"];?>
+                        <div class="custom-control custom-checkbox small">
+                          <input type="checkbox" class="custom-control-input" id="<?php echo $item[$j];?>" name="checkbox" onClick="informarItemsElegidos('checkbox')">           <!--// asignamos el codigo de item-->
+                          <label class="custom-control-label" for="<?php echo $item[$j];?>"><nbsp></nbsp><h6><?php echo $item[$j];?> <!-- imprimimos el nombre del item--></h6><br   /></label>
+                        </div>
+                        <?php $j++;
+                      }
+                    mysqli_free_result($resx);  ?> <!-- se libera la consulta-->
+                    <?php $i++;
+                    }
+                  mysqli_free_result($res);?>
                     </div>
 <!--Sexto Nivel-->                    
-                  <div class="card-header py-3">
-                      <nav class="navbar navbar-expand navbar-light bg-light">
-                  <h6 class="m-0 font-weight-bold text-primary">Sexto nivel</h6>
-                      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" onClick="toggleHidden('#sexto')"><!--Titulo opcional para el dropdown-->
+                <div class="card-header py-3">
+                    <nav class="navbar navbar-expand navbar-light bg-light" onClick="toggleHidden('#sexto')">
+                      <h6 class="m-0 font-weight-bold text-primary">Sexto nivel</h6>
+                      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"><!--Titulo opcional para el dropdown-->
                       </a>
-                      </nav>
+                    </nav>
                 </div>
                 <div class="card-body" id="sexto" hidden="true">
-                  <p>Bienvenido Nombre de usuario</p>
-                </div>
-                  
+                    <?php   $nivel=6;
+                    $sql = "select * from `materia` where Nivel='".$nivel."'"; //esta es una tabla q contiene un listado de titulos principales
+                    $res=mysqli_query($conn,$sql) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
+                    $i=0;
+                    while($row = mysqli_fetch_assoc($res)){
+                      $title[$i]=$row["Materia"];
+                      $codtit[$i]=$row["Id_materia"];?>
+                      <?php $sqlx = "select * from materia where Id_materia='".$codtit[$i]."'";
+                      $resx=mysqli_query($conn, $sqlx) or die(mysql_error());
+                      $j=0;
+                      $cero=0;
+                      while($rowx = mysqli_fetch_assoc($resx)){
+                        $item[$j]=$rowx["Materia"];
+                        $coditem[$j]=$rowx["Id_materia"];?>
+                        <div class="custom-control custom-checkbox small">
+                          <input type="checkbox" class="custom-control-input" id="<?php echo $item[$j];?>" name="checkbox" onClick="informarItemsElegidos('checkbox')">           <!--// asignamos el codigo de item-->
+                          <label class="custom-control-label" for="<?php echo $item[$j];?>"><nbsp></nbsp><h6><?php echo $item[$j];?> <!-- imprimimos el nombre del item--></h6><br   /></label>
+                        </div>
+                        <?php $j++;
+                      }
+                    mysqli_free_result($resx);  ?> <!-- se libera la consulta-->
+                    <?php $i++;
+                    }
+                  mysqli_free_result($res);?>
+                </div>               
 <!--Septimo Nivel-->
                 <div class="card-header py-3">
-                   <nav class="navbar navbar-expand navbar-light bg-light">
+                   <nav class="navbar navbar-expand navbar-light bg-light" onClick="toggleHidden('#septimo')">
                       <h6 class="m-0 font-weight-bold text-primary">S&eacute;ptimo nivel</h6> 
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" onClick="toggleHidden('#septimo')"><!--Titulo opcional para el dropdown-->
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"><!--Titulo opcional para el dropdown-->
                         </a>
                   </nav>
                   </div>
-                    <div class="card-body" id="septimo" hidden="true">
-                        <p>Bienvenido Nombre de usuario</p>
-                    </div>
+                  <div class="card-body" id="septimo" hidden="true">
+                    <?php   $nivel=7;
+                    $sql = "select * from `materia` where Nivel='".$nivel."'"; //esta es una tabla q contiene un listado de titulos principales
+                    $res=mysqli_query($conn,$sql) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
+                    $i=0;
+                    while($row = mysqli_fetch_assoc($res)){
+                      $title[$i]=$row["Materia"];
+                      $codtit[$i]=$row["Id_materia"];?>
+                      <?php $sqlx = "select * from materia where Id_materia='".$codtit[$i]."'";
+                      $resx=mysqli_query($conn, $sqlx) or die(mysql_error());
+                      $j=0;
+                      $cero=0;
+                      while($rowx = mysqli_fetch_assoc($resx)){
+                        $item[$j]=$rowx["Materia"];
+                        $coditem[$j]=$rowx["Id_materia"];?>
+                        <div class="custom-control custom-checkbox small">
+                          <input type="checkbox" class="custom-control-input" id="<?php echo $item[$j];?>" name="checkbox" onClick="informarItemsElegidos('checkbox')">           <!--// asignamos el codigo de item-->
+                          <label class="custom-control-label" for="<?php echo $item[$j];?>"><nbsp></nbsp><h6><?php echo $item[$j];?> <!-- imprimimos el nombre del item--></h6><br   /></label>
+                        </div>
+                        <?php $j++;
+                      }
+                    mysqli_free_result($resx);  ?> <!-- se libera la consulta-->
+                    <?php $i++;
+                    }
+                  mysqli_free_result($res);?>
+                  </div>
 <!--Octavo Nivel-->                    
-                  <div class="card-header py-3">
-                      <nav class="navbar navbar-expand navbar-light bg-light">
-                  <h6 class="m-0 font-weight-bold text-primary">Octavo nivel</h6>
-                      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" onClick="toggleHidden('#octavo')"><!--Titulo opcional para el dropdown-->
+                <div class="card-header py-3">
+                    <nav class="navbar navbar-expand navbar-light bg-light" onClick="toggleHidden('#octavo')">
+                      <h6 class="m-0 font-weight-bold text-primary">Octavo nivel</h6>
+                      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"><!--Titulo opcional para el dropdown-->
                       </a>
-                      </nav>
+                    </nav>
                 </div>
-                </form>
                 <div class="card-body" id="octavo" hidden="true">
-                  <p>Bienvenido Nombre de usuario</p>
+                    <?php   $nivel=8;
+                    $sql = "select * from `materia` where Nivel='".$nivel."'"; //esta es una tabla q contiene un listado de titulos principales
+                    $res=mysqli_query($conn,$sql) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
+                    $i=0;
+                    while($row = mysqli_fetch_assoc($res)){
+                      $title[$i]=$row["Materia"];
+                      $codtit[$i]=$row["Id_materia"];?>
+                      <?php $sqlx = "select * from materia where Id_materia='".$codtit[$i]."'";
+                      $resx=mysqli_query($conn, $sqlx) or die(mysql_error());
+                      $j=0;
+                      $cero=0;
+                      while($rowx = mysqli_fetch_assoc($resx)){
+                        $item[$j]=$rowx["Materia"];
+                        $coditem[$j]=$rowx["Id_materia"];?>
+                        <div class="custom-control custom-checkbox small">
+                          <input type="checkbox" class="custom-control-input" id="<?php echo $item[$j];?>" name="checkbox" onClick="informarItemsElegidos('checkbox')">           <!--// asignamos el codigo de item-->
+                          <label class="custom-control-label" for="<?php echo $item[$j];?>"><nbsp></nbsp><h6><?php echo $item[$j];?> <!-- imprimimos el nombre del item--></h6><br   /></label>
+                        </div>
+                        <?php $j++;
+                      }
+                    mysqli_free_result($resx);  ?> <!-- se libera la consulta-->
+                    <?php $i++;
+                    }
+                mysqli_free_result($res);?>
                 </div>
                   
               </div>
             </div>
           </div>
 
-  <script src="js/JSmaterias.js"></script>
+  <script src="../js/JSmaterias.js"></script>
 </div>
 </div>
+<?php $conn->close();?>

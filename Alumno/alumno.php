@@ -1,3 +1,14 @@
+<?php
+    session_start();
+
+    if( !isset($_SESSION["correo"])){
+        header("location:../login.html");
+    }else{
+        //La sesion existe SSI pasó por el login y los datos fueron correctos
+        $correo = $_SESSION["correo"];
+        //echo "<a href='./cerrarSesion.php?nombreSesion=boleta'>Cerrar Sesi&oacute;n</a>";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +38,7 @@
   <div id="wrapper">
 
 
-        <?php include("../Admin/sidebar.php"); ?>
+        <?php include("sidebarAlumno.php"); ?>
 
 
     <!-- Content Wrapper -->
@@ -37,7 +48,7 @@
       <div id="content">
 
 
-            <?php include("../Admin/topbar.php"); ?>
+            <?php include("topbarAl.php"); ?>
 
 
         <!-- Begin Page Content -->
@@ -46,20 +57,11 @@
                <?php
                 if (isset($_GET["page"]) && !is_null($_GET["page"])) {
                     switch ($_GET["page"]) {
-                        case "materias":
+                        case "Materias":
                           include("materias.php");
                           break;
                         case "Perfil":
                           include("Perfil.php");
-                          break;
-                        case "InfoAlumnos":
-                          include("InfoAlumnos.php");
-                          break;
-                        case "dashboard":
-                          include("dashboard.php");
-                          break;
-                        case "InicioAlumno":
-                          include("InicioAlumno.php");
                           break;
                         default:
                           include("InicioAlumno.php");
@@ -69,10 +71,6 @@
                 }
 
                 ?>
-
-
-
-
         </div>
         <!-- End of Content Wrapper -->
 
@@ -127,3 +125,4 @@
 </body>
 
 </html>
+<?php } ?>
