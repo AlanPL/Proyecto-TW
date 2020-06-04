@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/registro.css">
 
 </head>
 
 <body class="imagen">
-    <header id="main-header">
+   <header id="main-header">
 
         <a id="logo-header" href="index.html">
             <span class="site-name">PRE-REGISTRO ESCOM</span>
-            <span class="site-desc">Iniciar sesion</span>
+            <span class="site-desc">Login</span>
         </a> <!-- / #logo-header -->
 
         <nav>
@@ -24,32 +24,32 @@
         </nav><!-- / nav -->
 
     </header><!-- / #main-header -->
-    
     <div class="container">
         <div class="row">
             <div class="col-sm-6 mx-auto modal-content">
-                <form action="" id="form1">
+
+                <form method="POST" id="formLogin" action="./php/sesiones.php">
                   <br>
-                   <label for="boleta">Boleta</label>
-                    <input type="text" name="boleta" id="boleta" placeholder="Inserta aqui tu boleta" class="form-control">
+                    <label for="correo">Correo electr&oacute;nico</label>
+                    <input type="text" name="correo" placeholder="Inserta aqu&iacute; tu email" class="form-control">
                     <br>
-                    <label for="contrasenia">Contraseña</label>
-                    <input type="text" name="contrasenia" id="contrasenia" placeholder="Escribe tu contrasenia" class="form-control">
+                    <label for="contrasenia">Contrase&ntilde;a</label>
+                    <input type="text" name="contrasenia" placeholder="Escribe tu contrase&ntilde;a" class="form-control">
                     <br>
-                    <input type="submit" value="Entrar" class="btn btn-info btn-block">
+                    <input type="submit" value="Iniciar Sesion" class="btn btn-info btn-block">
                 </form>
                 <br>
-                
+                <a href="index.html" class="btn btn-warning btn-block" id="regresar">Regresar al inicio</a>
+                <!--<button type="submit" class="btn btn-warning btn-block" id="regresar" href=>Regresar al inicio</button>-->
             </div>
-            <!--<button type="button" href="index.html" class="btn btn-warning btn-block" id="regresar">Regresar al inicio</button>-->
-            <a href="index.html" class="btn btn-warning btn-block" id="regresar">Regresar al inicio</a>
+
         </div>
     </div>
-    
     <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/loginAdmin.js"></script>
     <script src="js/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="js/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/login.js"></script>
+
 </body>
 </html>
