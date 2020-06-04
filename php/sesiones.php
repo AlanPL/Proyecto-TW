@@ -22,16 +22,21 @@
 
         $_SESSION["correo"] = $correo;
 
-        $resp["code"] = 1;
-        $resp["redirect"] = "./Admin/admin.php";
-        $respAX = json_encode($resp);
-        echo $respAX;
+        header("Location: ../Admin/admin.php");
     }else{
-        
-        $resp["code"] = 0;
-        $resp["redirect"] = "./LoginAdmin.html";
-        $respAX = json_encode($resp);
-        echo $respAX;
+        $consulta = $con->prepare('SELECT * FROM alumno WHERE correo = ? AND contrasena= ?');
+        $consulta -> bind_param('ss', $correo, $contrasenia);
+
+        $consulta->execute();
+        $result = $consulta->get_result();
+
+        if($row = $result->fetch_assoc()){
+            $_SESSION["correo"] = $correo;
+            header("Location: ../Alumno/alumno.php");
+            echo "<script>alert('Usuario No Valido');</script>";
+        }else{
+            header("Location: ../login.html");
+        }
     }
     $con->close();
 ?>
