@@ -3,7 +3,7 @@
         session_start();
     }
     if( !isset($_SESSION["correo"])){
-        header("location:../LoginAdmin.html");
+        header("location:../login.html");
     }
     $message =$_POST["data"];
 ?>
@@ -58,5 +58,5 @@
                 </div>
               </div>
             </div>
-            
+
 <script src="../js/AdminJS/EditarMateriaJS.js"></script>

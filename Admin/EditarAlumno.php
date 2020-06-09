@@ -3,8 +3,9 @@
         session_start();
     }
     if( !isset($_SESSION["correo"])){
-        header("location:../LoginAdmin.html");
+        header("location:../login.html");
     }
+    $message =$_POST["data"];
 ?>
           <!-- Page Heading -->
           <div class="row mb-4">
@@ -31,26 +32,8 @@
                       <div class="col-lg-6">
                         <div class="p-5">
                           <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Alumno <?php echo $_GET["id"] ?></h1>
+                            <h1 class="h4 text-gray-900 mb-4">Materias Seleccionadas</h1>
                           </div>
-                            <div class="form-group">
-                              <label class="h5 mb-0 font-weight-bold text-gray-800">Nombre: </label>
-                            </div>
-                            <div class="form-group">
-                              <label class="h5 mb-0 font-weight-bold text-gray-800">Boleta: </label>
-                            </div>
-                            <div class="form-group">
-                              <label class="h5 mb-0 font-weight-bold text-gray-800">Email:  </label>
-                            </div>
-                            <div class="form-group">
-                              <label class="h5 mb-0 font-weight-bold text-gray-800">Numero Telefonico:  </label>
-                            </div>
-                            <div class="form-group">
-                              <label class="h5 mb-0 font-weight-bold text-gray-800">Fecha de Creacion de Cuenta:  </label>
-                            </div>
-                            <div class="form-group">
-                              <label class="h5 mb-0 font-weight-bold text-gray-800">Unidades de Aprendizaje Seleccionadas</label>
-                            </div>
 
                             <ul class="list-group">
                               <li class="list-group-item">Matematicas Avanzadas</li>
@@ -62,25 +45,33 @@
                       <div class="col-lg-6">
                         <div class="p-5">
                           <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Alumno <?php echo $_GET["id"] ?></h1>
+                            <h1 class="h4 text-gray-900 mb-4">Informacion del Alumno </h1>
                           </div>
-                          <form class="user">
-                            <div class="form-group">
-                              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nombre">
-                            </div>
-                            <div class="form-group">
-                              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Boleta">
-                            </div>
-                            <div class="form-group">
-                              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Numero Telefonico">
-                            </div>
+                          <form class="user" method="POST" id="formEditarAlumno" >
+                                <input name="func" type="hidden" value="EditarAlumno">
+                               <div class="form-group">
+                                   <input type="text" name="boleta" class="form-control form-control-user"  placeholder="Boleta" value="<?php echo $message['boleta'] ?>">
+                               </div>
+                                <div class="form-group">
+                                  <input type="text" name="nombre" class="form-control form-control-user"  placeholder="Nombre" value="<?php echo $message['nombre'] ?>">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" name="apellido_1" class="form-control form-control-user"  placeholder="Apellido Paterno" value="<?php echo $message['primerApe'] ?>">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" name="apellido_2" class="form-control form-control-user"  placeholder="Apellido Materno" value="<?php echo $message['segundoApe'] ?>">
+                                </div>
+                                <div class="form-group">
+                                  <input type="email" name="correo" class="form-control form-control-user"  placeholder="Email" value="<?php echo $message['correo'] ?>">
+                                </div>
+                                <div class="form-group">
+                                  <input type="password" name="contrasenia" class="form-control form-control-user"  placeholder="Contraseña" value="<?php echo $message['contrasena'] ?>">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" name="estado" class="form-control form-control-user"  placeholder="Estado" value="<?php echo $message['estado'] ?>">
+                                </div>
 
-                            <a href="admin.php?page=InfoAlumnos" class="btn btn-primary btn-user btn-block">
-                              Guardar Datos
-                            </a>
+                                <input type="submit" value="Guardar Datos" class="btn btn-primary btn-user btn-block">
 
                           </form>
 
@@ -91,3 +82,4 @@
                 </div>
               </div>
             </div>
+<script src="../js/AdminJS/EditarAlumnoJS.js"></script>

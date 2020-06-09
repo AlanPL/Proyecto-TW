@@ -3,7 +3,7 @@
         session_start();
     }
     if( !isset($_SESSION["correo"])){
-        header("location:../LoginAdmin.html");
+        header("location:../login.html");
     }
 ?>
           <!-- Page Heading -->
@@ -93,5 +93,6 @@
               $("#agregarAlumnoBtn").click(function(){
                    $( "#adminContent" ).load( "AgregarAlumno.php",function(){}).hide().fadeIn();
               })
+
           </script>
 <script src="../js/AdminJS/InfoAlumnosJS.js"></script>

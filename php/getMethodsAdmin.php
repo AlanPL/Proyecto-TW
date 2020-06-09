@@ -14,6 +14,11 @@
                 seleccionarMateria($_GET["id"]);
             }
             break;
+        case 'SeleccionarAlumnoId':
+            if (isset($_GET["id"])) {
+                seleccionarAlumno($_GET["id"]);
+            }
+            break;
         default:
 
             break;
@@ -107,6 +112,33 @@
         $sql = $con->prepare("SELECT * FROM materia where Id_materia = ? limit 1");
 
         $sql -> bind_param('i', $id);
+        $sql->execute();
+        $result = $sql->get_result();
+
+        $resp;
+        if(mysqli_num_rows($result) > 0) {
+
+            $value = $result->fetch_object();
+
+            $resp = array( "found" => true , "data" => $value);
+
+        }else{
+            $resp = array( "found" => false );
+        }
+        $con -> close();
+
+        //$out = array_values($array);
+
+        echo json_encode($resp);
+
+    }
+    function seleccionarAlumno($id){
+        require_once 'conexion.php';
+        $con = conectar();
+
+        $sql = $con->prepare("SELECT * FROM alumno where boleta = ? limit 1");
+
+        $sql -> bind_param('s', $id);
         $sql->execute();
         $result = $sql->get_result();
 

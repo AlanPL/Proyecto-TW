@@ -5,7 +5,7 @@ $(document).ready(function(){
       $("#deleteAlumnoBtn").click(function(){
 
           //e.preventDefault();
-          var id = $("#boletaAlumno").val();          
+          var id = $("#boletaAlumno").val();
           $.ajax({
               type:"POST",
               url:"../php/crudAdmin.php",
@@ -54,24 +54,23 @@ function requestInfoAlumnos(){
         }
     });
 
-};
+}
 
 
 
 function btnEditAlumnoClicked(id){
+
     $.ajax({
-        type:"POST",
-        url:"../php/crudAdmin.php",
-        data: {func: "SeleccionarMateriaId", id: id},
+        type:"GET",
+        url:"../php/getMethodsAdmin.php",
+        data: {func: "SeleccionarAlumnoId", id: id},
         cache:false,
         success:function(respAX){
-
-            //var AX = $.parseJSON(respAX);
             var AX = JSON.parse(respAX);
             if (AX.found) {
-                $( "#adminContent" ).load( "EditarUA.php",{data: AX.data},function(){}).hide().fadeIn();
+                $( "#adminContent" ).load( "EditarAlumno.php",{data: AX.data},function(){}).hide().fadeIn();
             }else{
-                $.notify("No se encontró la materia :(","error");
+                $.notify("No se encontró al alumno :(","error");
             }
         },
         error: function(a) {

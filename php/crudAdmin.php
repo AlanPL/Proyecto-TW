@@ -12,6 +12,9 @@
         case 'EditarMateria':
             editarMateria();
             break;
+        case 'EditarAlumno':
+            editarAlumno();
+            break;
         case 'BorrarMateria':
             borrarMateria();
             break;
@@ -137,6 +140,35 @@
         }else {
             //header("location:../Admin/admin.php?page=AgregarMateria&success=false");
             echo 0;
+        }
+        $con->close();
+    }
+    function editarAlumno(){
+        $con = conectar();
+        $boleta = $_POST["boleta"];
+        $nombre = $_POST["nombre"];
+        $apaterno = $_POST["apellido_1"];
+        $amaterno = $_POST["apellido_2"];
+        $correo = $_POST["correo"];
+        $contra = $_POST["contrasenia"];
+        $d = '2009-04-30';
+        $estado = $_POST["estado"];
+
+        if (!empty($boleta) && !empty($nombre) && !empty($apaterno) &&
+            !empty($amaterno) && !empty($correo) && !empty($contra) && !empty($estado)) {
+            $consulta = $con->prepare("UPDATE alumno SET boleta=?, nombre=?, primerApe=?, segundoApe=?, correo=?, fechaNac=?, contrasena=?, auditoria=?, estado = ? WHERE boleta = ? " );
+            $consulta -> bind_param('ssssssssss', $boleta, $nombre, $apaterno, $amaterno, $correo, $d, $contra, $d, $estado, $boleta);
+
+            if ($consulta -> execute() ) {
+               //header("location:../Admin/admin.php?page=AgregarMateria&success=true");
+               echo 1;
+            } else {
+                //header("location:../Admin/admin.php?page=AgregarMateria&success=false");
+                echo 0;
+            }
+        }else {
+            //header("location:../Admin/admin.php?page=AgregarMateria&success=false");
+            echo $mysqli->error;
         }
         $con->close();
     }

@@ -3,7 +3,7 @@
         session_start();
     }
     if( !isset($_SESSION["correo"])){
-        header("location:../LoginAdmin.html");
+        header("location:../login.html");
     }
 ?>
 
