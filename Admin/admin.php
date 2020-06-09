@@ -2,7 +2,7 @@
     session_start();
 
     if( !isset($_SESSION["correo"])){
-        header("location:../LoginAdmin.html");
+        header("location:../login.html");
     }else{
         //La sesion existe SSI pasó por el login y los datos fueron correctos
         $correo = $_SESSION["correo"];
@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link href="../css/notify.css" rel="stylesheet">
   <script src="../js/jquery-3.5.0.min.js"></script>
-  <!-- Bootstrap core JavaScript-->  
+  <!-- Bootstrap core JavaScript-->
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -60,45 +60,7 @@
 
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-               <?php
-                if (isset($_GET["page"]) && !is_null($_GET["page"])) {
-                    switch ($_GET["page"]) {
-                        case "AgregarAlumno":
-                          include("AgregarAlumno.php");
-                          break;
-                        case "AgregarMateria":
-                            include("AgregarMateria.php");
-                          break;
-                        case "EditarAlumno":
-                          include("EditarAlumno.php");
-                          break;
-                        case "EditarInformacion":
-                          include("EditarInformacion.php");
-                          break;
-                        case "InfoAlumnos":
-                          include("InfoAlumnos.php");
-                          break;
-                        case "InfoUnidadesAprendizaje":
-                          include("InfoUnidadesAprendizaje.php");
-                          break;
-                        case "dashboard":
-                          include("dashboard.php");
-                          break;
-                        case "Estadisticas":
-                          include("Estadisticas.php");
-                          break;
-                        default:
-                          include("Estadisticas.php");
-                    }
-                }else{
-                    include("Estadisticas.php");
-                }
-
-                ?>
-
-
+        <div class="container-fluid" id="adminContent">
 
 
         </div>
@@ -141,8 +103,11 @@
 
 
 
+
   <!-- Custom scripts for all pages-->
   <script src="../js/sb-admin-2.min.js"></script>
+
+  <script src="../js/AdminJS/redireccionesAdmin.js"></script>
 
   <!-- Page level plugins -->
   <script src="../vendor/chart.js/Chart.min.js"></script>

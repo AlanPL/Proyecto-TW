@@ -1,23 +1,23 @@
 $(document).ready(function(){
 
-        requestUAData();
+        requestInfoAlumnos();
 
-      $("#deleteUABtn").click(function(){
+      $("#deleteAlumnoBtn").click(function(){
 
           //e.preventDefault();
-          var id = $("#UAid").val();
+          var id = $("#boletaAlumno").val();          
           $.ajax({
               type:"POST",
               url:"../php/crudAdmin.php",
-              data: {func: "BorrarMateria", id: id},
+              data: {func: "BorrarAlumno", id: id},
               cache:false,
               success:function(respAX){
-                  requestUAData();
+                  requestInfoAlumnos();
                   $('#cancelBtn').trigger('click');
                   if (respAX==1) {
-                      $.notify("Materia Eliminada","success");
+                      $.notify("Alumno Eliminado","success");
                   }else{
-                      $.notify("No se pudo eliminar la materia :(","error");
+                      $.notify("No se pudo eliminar el alumno :(","error");
                   }
               },
               error: function(a) {
@@ -31,21 +31,24 @@ $(document).ready(function(){
 
 });
 
+function btnDeleteAlumnoClicked(id){
+    $("#boletaAlumno").val(id);
+}
 
-function requestUAData(){
+function requestInfoAlumnos(){
 
     $.ajax({
         type:"GET",
         url:"../php/getMethodsAdmin.php",
-        data: {func: "SeleccionarMaterias"},
+        data: {func: "SeleccionarAlumnos"},
         contentType: 'application/html; charset=utf-8',
         dataType: "html",
         cache:false,
         success:function(respAX){
-                $('#uaInfo').html(respAX);
+                $('#alumnoInfo').html(respAX);
         },
         error: function(a) {
-            $('#uaInfo').html("<tr> <td> - </td> <td> - </td> <td> - </td> <td> - </td> </tr>");
+            $('#alumnoInfo').html("<tr> <td> - </td> <td> - </td> <td> - </td> <td> - </td> </tr>");
           console.log('error:\n');
           console.log(a);
         }
@@ -53,15 +56,12 @@ function requestUAData(){
 
 };
 
-function btnDeleteUAClicked(id){
-    $("#UAid").val(id);
-    $("#uaName").text("UA");
-}
 
-function btnEditUAClicked(id){
+
+function btnEditAlumnoClicked(id){
     $.ajax({
-        type:"GET",
-        url:"../php/getMethodsAdmin.php",
+        type:"POST",
+        url:"../php/crudAdmin.php",
         data: {func: "SeleccionarMateriaId", id: id},
         cache:false,
         success:function(respAX){

@@ -14,10 +14,9 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-1">
-              <a href="admin.php?page=AgregarMateria" class="btn btn-success">
-                <i class="fas fa-user"></i>
-                Agregar UA
-              </a>
+                <button  class="btn btn-success" id="agregarUABtn">
+                    Agregar UA
+                </button>
             </div>
 
           </div>
@@ -74,4 +73,9 @@
               </div>
             </div>
           </div>
+          <script>
+                  $("#agregarUABtn").click(function(){
+                       $( "#adminContent" ).load( "AgregarMateria.php",function(){}).hide().fadeIn();
+                  })
+          </script>
 <script src="../js/AdminJS/InfoUAJS.js"></script>

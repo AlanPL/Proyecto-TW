@@ -31,20 +31,27 @@
                             <h1 class="h4 text-gray-900 mb-4">Alumno</h1>
                           </div>
                           <form class="user" method="POST" id="formAgregarAlumno" >
-                            <div class="form-group">
-                              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nombre">
-                            </div>
-                            <div class="form-group">
-                              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Boleta">
-                            </div>
-                            <div class="form-group">
-                              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Numero Telefonico">
-                            </div>
+                                <input name="func" type="hidden" value="AgregarAlumno">
+                               <div class="form-group">
+                                   <input type="text" name="boleta" class="form-control form-control-user"  placeholder="Boleta">
+                               </div>
+                                <div class="form-group">
+                                  <input type="text" name="nombre" class="form-control form-control-user"  placeholder="Nombre">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" name="apellido_1" class="form-control form-control-user"  placeholder="Apellido Paterno">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" name="apellido_2" class="form-control form-control-user"  placeholder="Apellido Materno">
+                                </div>
+                                <div class="form-group">
+                                  <input type="email" name="correo" class="form-control form-control-user"  placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                  <input type="password" name="contrasenia" class="form-control form-control-user"  placeholder="Contraseña">
+                                </div>
 
-                            <input type="submit" value="Agregar Alumno" class="btn btn-success btn-user btn-block">
+                                <input type="submit" value="Agregar Alumno" class="btn btn-success btn-user btn-block">
 
                           </form>
 
@@ -56,4 +63,4 @@
                 </div>
               </div>
             </div>
-<!--<script src="../js/AdminJS/AgregarAlumnoJS.js"></script>-->
+<script src="../js/AdminJS/AgregarAlumnoJS.js"></script>

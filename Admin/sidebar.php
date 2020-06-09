@@ -22,9 +22,9 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item active">
-        <a class="nav-link" href="admin.php?page=Estadisticas">
+        <button  class="btn btn-link nav-link" id="EstadisticasBtn">
           <i class="fas fa-fw fa-table"></i>
-          <span>Estadisticas</span></a>
+          <span>Estadisticas</span></button>
       </li>
 
 
@@ -33,17 +33,17 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="admin.php?page=InfoAlumnos">
+        <button  class="btn btn-link nav-link" id="infoAlumnosBtn">
           <i class="fas fa-users"></i>
-          <span>Alumnos</span></a>
+          <span>Alumnos</span></button>
       </li>
 
       <hr class="sidebar-divider">
 
       <li class="nav-item">
-        <a class="nav-link" href="admin.php?page=InfoUnidadesAprendizaje">
+        <button  class="btn btn-link nav-link" id="infoUABtn">
           <i class="fas fa-users"></i>
-          <span>Unidades de Aprendizaje</span></a>
+          <span>Unidades de Aprendizaje</span></button>
       </li>
 
 
@@ -54,9 +54,9 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="admin.php?page=EditarInformacion">
+        <button  class="btn btn-link nav-link" id="editarInfoBtn">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Editar Informacion</span></a>
+          <span>Editar Informacion</span></button>
       </li>
 
 

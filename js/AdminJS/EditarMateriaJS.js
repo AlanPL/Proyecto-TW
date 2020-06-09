@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-   $("#formAgregarMateria").submit(function(e){
+   $("#formEditarMateria").submit(function(e){       
         e.preventDefault();
-        var formulario = $("#formAgregarMateria").serialize();
+        var formulario = $("#formEditarMateria").serialize();
         $.ajax({
             type:"POST",
             url:"../php/crudAdmin.php",
@@ -11,10 +11,10 @@ $(document).ready(function(){
             success:function(respAX){
 
                 if (respAX==1) {
-                    $("#formAgregarMateria").trigger("reset");     
-                    $.notify("Materia Agregada","success");
+                    $.notify("Datos Guardados","success");
+
                 }else{
-                    $.notify("No se pudo agregar la materia :(","error");
+                    $.notify("No se pudieron guardar los datos :(","error");
                 }
             },
             error: function(a) {
@@ -23,5 +23,4 @@ $(document).ready(function(){
             }
         });
    })
-
 });
