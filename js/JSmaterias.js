@@ -1,27 +1,34 @@
 function toggleHidden(sel) {
-                elem = document.querySelector(sel)
-                elem.hidden = elem.hidden ? false : true;
-            }
+    elem = document.querySelector(sel)
+    elem.hidden = elem.hidden ? false : true;
+}
                 
-            var max=7;
-            //El contador es un array de forma que cada posición del array es una linea del formulario
-            var contador=new Array(0,0);
-            function validar(check,grupo) {
-                if (check.checked==true){
-                    contador[grupo]++;
-                        if (contador[grupo]>max) {
-                            alert("Solo puedes registrar "+max+" materias.");
-                            check.checked=false;
-                            contador[grupo]--;
-                        }
-                }else {
-                    //si la casilla no estaba marcada, resto uno al contador de grupo
-                    contador[grupo]--;
-                }
-               document.formulario2.cajaTexto.value = contador[grupo];
-            if(contador[grupo]==0){
-                document.formulario3.boton.disabled=1;
-            }else{
-                document.formulario3.boton.disabled=0;
+var max=7;
+function informarItemsElegidos(elemento) {
+    var elementosObtenidos = document.getElementsByName(elemento);
+    var elegidos = 0;
+    for (var i = 0; i < elementosObtenidos.length; i++) {
+        if (elementosObtenidos[i].checked){
+            ++elegidos;
+            if(elegidos>max) {
+                alert("Solo puedes registrar "+max+" materias.");
+                elementosObtenidos[i].checked=false;
+                --elegidos;
             }
-            }
+        }
+    };
+    document.formulario2.cajaTexto.value = elegidos;
+    if(elegidos<1){
+        document.formulario3.boton.disabled=1;
+    }else{
+        document.formulario3.boton.disabled=0;
+    }
+}
+
+function mi_alerta(){
+    var mensaje;
+    var opcion = confirm("¿Seguro que ya elegiste todas tus materias?, esta acción no se puede deshacer");
+    if (opcion == true) {
+        document.body.innerHTML += "<a href='alumno.php?page=RegistroCompleto'></a>";
+    }
+}
