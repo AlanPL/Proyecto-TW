@@ -1,4 +1,4 @@
-<?php  include '../php/conexion.php'; 
+<?php  include '../php/conexion.php'; include 'ElegirNivel.php';
 $conn = conectar();
 $correo = $_SESSION["correo"];?>
 <!-- Topbar -->
@@ -40,13 +40,7 @@ $correo = $_SESSION["correo"];?>
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow">
       <div class="nav-link dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
-        <?php $sql = "select * from `alumno` where correo='".$correo."'";
-      $res=mysqli_query($conn,$sql) or die(mysql_error());
-      $row = mysqli_fetch_assoc($res);    //obtener una fila de resultado
-      $nombre = $row["nombre"];
-      $ApPaterno = $row["primerApe"];
-      $ApMaterno = $row["segundoApe"];
-      echo $nombre;echo " "; echo $ApPaterno;echo " "; echo $ApMaterno; ?>
+        <?php conseguirNombre($correo,$conn); ?>
         <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
       </div>
       <!-- Dropdown - User Information -->
