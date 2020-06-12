@@ -69,34 +69,12 @@ CREATE TABLE `alumno` (
 --
 
 LOCK TABLES `alumno` WRITE;
+INSERT INTO `alumno` (boleta,nombre,primerApe,segundoApe,correo,fechaNac,contrasena,auditoria,estado) 
+  VALUES ('2019630149', 'Wade', 'paterno', 'materno', 'correo@alumno.com', '1999-05-21', '12345678', '2020-06-15','nada'),
+  ('2354510', 'Bob', 'paterno', 'materno', 'ejemplo@correo.com', '1999-05-21', '87654321', '2020-06-15','nada'),
+  ('1278452', 'Pedro', 'paterno', 'materno', 'correo@gmail.com', '1999-05-21', 'constrasena', '2020-06-15','nada');
 /*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
 /*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `horario`
---
-
-DROP TABLE IF EXISTS `horario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `horario` (
-  `boleta` varchar(10) NOT NULL,
-  `Id_materia` int NOT NULL,
-  KEY `boleta` (`boleta`),
-  KEY `horario_ibfk_2_idx` (`Id_materia`),
-  CONSTRAINT `horario_ibfk_1` FOREIGN KEY (`boleta`) REFERENCES `alumno` (`boleta`),
-  CONSTRAINT `horario_ibfk_2` FOREIGN KEY (`Id_materia`) REFERENCES `materia` (`Id_materia`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `horario`
---
-
-LOCK TABLES `horario` WRITE;
-/*!40000 ALTER TABLE `horario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `horario` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -119,11 +97,47 @@ CREATE TABLE `materia` (
 --
 
 LOCK TABLES `materia` WRITE;
+INSERT INTO `materia` VALUES (101, 'Analisis Vectorial', 1), (102, 'Calculo', 1), (103,'Matematicas Discretas', 1), (104, 'Algoritmia y Programacion Estructurada', 1),
+        (105, 'Fisica', 1), (106, 'Ingenieria, Etica y Sociedad', 1);
+INSERT INTO `materia` VALUES (201, 'Ecuaciones diferenciales', 2), (202, 'Algebra Lineal', 2), (203,'Calculo Aplicado', 2), (204, 'Estructura de datos', 2),
+        (205, 'Comunicacion Oral y Escrita', 2), (206, 'Analisis Fundamental de Circuitos', 2);
+INSERT INTO `materia` VALUES (301, 'Matematicas Avanzadas para la Ingenieria', 3), (302, 'Fundamentos Economicos', 3), (303,'Fundamentos de Diseno Digital', 3), 
+        (304, 'Teoria Computacional', 3), (305, 'Base de Datos', 3), (306, 'Programacion Orientada a Objetos', 3), (307, 'Electronica Analogica', 3);
+INSERT INTO `materia` VALUES (401, 'Redes de computadoras', 4), (402,'Diseno de Sistemas Digitales', 4), (403, 'Probabilidad y Estadistica', 4), (404,'Sistemas Operativos', 4),
+        (405, 'Analisis y Diseno Orientado a Objetos', 4), (406, 'Tecnologias para la Web', 4), (407,'Administracion Financiera', 4);
 /*!40000 ALTER TABLE `materia` DISABLE KEYS */;
-INSERT INTO `materia` VALUES (12,'k','g'),(13,'f','f'),(14,'s','s'),(15,'d','d'),(16,'e','e'),(17,'d','d'),(18,'df',''),(19,'','sds'),(20,'s','d'),(21,'x','dsgf');
 /*!40000 ALTER TABLE `materia` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+--
+-- Table structure for table `horario`
+--
+
+DROP TABLE IF EXISTS `horario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `horario` (
+  `boleta` varchar(10) NOT NULL,
+  `Id_materia` int NOT NULL AUTO_INCREMENT,
+  `recurse` int NOT NULL, /*0:primera vez, 1:recurse, 2:Ya quemo recurse*/
+  KEY `boleta` (`boleta`),
+  KEY `horario_ibfk_2_idx` (`Id_materia`),
+  CONSTRAINT `horario_ibfk_1` FOREIGN KEY (`boleta`) REFERENCES `alumno` (`boleta`),
+  CONSTRAINT `horario_ibfk_2` FOREIGN KEY (`Id_materia`) REFERENCES `materia` (`Id_materia`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `horario`
+--
+
+LOCK TABLES `horario` WRITE;
+INSERT INTO `horario` (boleta,Id_materia,recurse) VALUES ('2019630149', '201', 1), ('2019630149','202', 1), ('2019630149','302', 2),  
+  ('2354510', '201', 1),('2354510', '204', 2),('2354510', '304', 2),('1278452', '202',0),('1278452', '201', 1),('1278452', '302', 0);
+/*!40000 ALTER TABLE `horario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `horario` ENABLE KEYS */;
+UNLOCK TABLES;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
