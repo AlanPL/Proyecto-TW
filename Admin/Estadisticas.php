@@ -100,25 +100,26 @@
                 <h6 class="m-0 font-weight-bold text-primary">Porcentaje De Solicitud Por Semestre</h6>
             </div>
             <div class="card-body">
-                <h4 class="small font-weight-bold">Primer Semestre <span class="float-right">20%</span></h4>
+
+                <h4 class="medium font-weight-bold">Segundo Semestre <span id="solicitudesSem2" class="small"></span> <span class="float-right" id="percentage2">40%</span></h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" id="percentageBar2"  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Segundo Semestre <span class="float-right">40%</span></h4>
+                <h4 class="medium font-weight-bold">Tercer Semestre <span id="solicitudesSem3" class="small"></span> <span class="float-right" id="percentage3">60%</span></h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning" role="progressbar" id="percentageBar3" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Tercer Semestre<span class="float-right">60%</span></h4>
+                <h4 class="medium font-weight-bold">Cuarto Semestre <span id="solicitudesSem4" class="small"></span> <span class="float-right" id="percentage4">80%</span></h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-primary" role="progressbar" id="percentageBar4" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Cuarto Semestre <span class="float-right">80%</span></h4>
+                <h4 class="medium font-weight-bold">Quinto Semestre <span id="solicitudesSem5" class="small"></span> <span class="float-right" id="percentage5">Complete!</span></h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-info" role="progressbar" id="percentageBar5" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <h4 class="small font-weight-bold">Quinto Semestre <span class="float-right">Complete!</span></h4>
+                <h4 class="medium font-weight-bold">Sexto Semestre <span id="solicitudesSem6" class="small"></span> <span class="float-right" id="percentage6">100%</span></h4>
                 <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" id="percentageBar6" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
         </div>
@@ -142,255 +143,77 @@
                 </div>
                 <div id="collapseOne" class="" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                        <div class="row">
+                        <div class="row" id="GraficasSemestre2">
 
-                            <!-- Pie Chart -->
-                            <div class="col-xl-4 col-lg-4">
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Teoria Computacional</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="myPieChart"></canvas>
-                                        </div>
-                                        <div class="mt-4 text-center small">
-                                            <span class="mr-2">
-                                                Total: 129
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-success"></i> Por Primera Vez: 81
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-primary"></i> Recursamiento: 48
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pie Chart -->
-                            <div class="col-xl-4 col-lg-4">
-                                <div class="card shadow mb-4">
 
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Materia2</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="myPieChart2"></canvas>
-                                        </div>
-                                        <div class="mt-4 text-center small">
-                                            <span class="mr-2">
-                                                Total: 129
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-success"></i> Por Primera Vez: 81
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-primary"></i> Recursamiento: 48
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pie Chart -->
-                            <div class="col-xl-4 col-lg-4">
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Materia3</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="myPieChart3"></canvas>
-                                        </div>
-                                        <div class="mt-4 text-center small">
-                                            <span class="mr-2">
-                                                Total: 129
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-success"></i> Por Primera Vez: 81
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-primary"></i> Recursamiento: 48
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="card border-left-primary">
+                <div class="card-body " id="headingOne">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">Tercer Semestre</div>
+                    </button>
+                </div>
+                <div id="collapseOne" class="" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row" id="GraficasSemestre3">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-left-primary">
+                <div class="card-body " id="headingOne">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">Cuarto Semestre</div>
+                    </button>
+                </div>
+                <div id="collapseOne" class="" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row" id="GraficasSemestre4">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="card border-left-success">
                 <div class="card-body " id="headingTwo">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">Tercer Semestre</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">Quinto Semestre</div>
                     </button>
                 </div>
                 <div id="collapseTwo" class="" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
-                        <div class="row">
+                        <div class="row" id="GraficasSemestre5">
 
-                            <!-- Pie Chart -->
-                            <div class="col-xl-4 col-lg-4">
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Teoria Computacional</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="myPieChart"></canvas>
-                                        </div>
-                                        <div class="mt-4 text-center small">
-                                            <span class="mr-2">
-                                                Total: 129
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-success"></i> Por Primera Vez: 81
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-primary"></i> Recursamiento: 48
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pie Chart -->
-                            <div class="col-xl-4 col-lg-4">
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Materia2</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="myPieChart2"></canvas>
-                                        </div>
-                                        <div class="mt-4 text-center small">
-                                            <span class="mr-2">
-                                                Total: 129
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-success"></i> Por Primera Vez: 81
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-primary"></i> Recursamiento: 48
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pie Chart -->
-                            <div class="col-xl-4 col-lg-4">
-                                <div class="card shadow mb-4">
-                                    <!-- Card Header - Dropdown -->
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Materia3</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="myPieChart3"></canvas>
-                                        </div>
-                                        <div class="mt-4 text-center small">
-                                            <span class="mr-2">
-                                                Total: 129
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-success"></i> Por Primera Vez: 81
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-primary"></i> Recursamiento: 48
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="card border-left-success">
+                <div class="card-body " id="headingTwo">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">Sexto Semestre</div>
+                    </button>
+                </div>
+                <div id="collapseTwo" class="" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row" id="GraficasSemestre6">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </div>

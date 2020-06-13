@@ -13,7 +13,7 @@ function conectar(){
     $port=3306;
     $socket="";
     $user="root";
-    $password="n0m3l0";
+    $password="";
     $dbname="semestre20202";
 
     $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
