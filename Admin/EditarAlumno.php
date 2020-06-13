@@ -7,6 +7,8 @@
     }
     $message =$_POST["data"];
 ?>
+<script src="../js/html2pdf.bundle.min.js"></script>
+<script src="../js/AdminJS/generadorReporte.js"></script>
           <!-- Page Heading -->
           <div class="row mb-4">
             <div class="col-sm-10">
@@ -14,15 +16,15 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-1">
-              <a href="#" class=" btn btn-primary ">
-                <i class="fas fa-download  "></i>
-                Generar Reporte
-              </a>
+                <button class=" btn btn-primary " id="descargarReporteAlumno">
+                  <i class="fas fa-download  "></i>
+                  Generar Reporte
+              </button>
             </div>
 
           </div>
 
-          <div class="card shadow mb-4">
+          <div class="card shadow mb-4" id="reporteAlumno">
 
               <div class="col-sm-12">
 

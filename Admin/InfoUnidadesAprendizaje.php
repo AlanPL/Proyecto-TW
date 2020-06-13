@@ -6,19 +6,27 @@
         header("location:../login.html");
     }
 ?>
-
+<script src="../js/html2pdf.bundle.min.js"></script>
+<script src="../js/AdminJS/generadorReporte.js"></script>
+<div id="reporteMaterias">
           <!-- Page Heading -->
           <div class="row mb-4">
             <div class="col-sm-10">
               <h1 class="h3 mb-2 text-gray-800">Unidades de Aprendizaje</h1>
             </div>
-            <div class="col-sm-1"></div>
+
             <div class="col-sm-1">
                 <button  class="btn btn-success" id="agregarUABtn">
+                    <i class="fas fa-book  "></i>
                     Agregar UA
                 </button>
             </div>
-
+            <div class="col-sm-1">
+              <button class=" btn btn-primary " id="descargarReporteMaterias">
+                <i class="fas fa-download  "></i>
+                Generar Reporte
+            </button>
+            </div>
           </div>
 
 
@@ -78,4 +86,5 @@
                        $( "#adminContent" ).load( "AgregarMateria.php",function(){}).hide().fadeIn();
                   })
           </script>
+      </div>
 <script src="../js/AdminJS/InfoUAJS.js"></script>

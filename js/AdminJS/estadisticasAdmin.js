@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     $.ajax({
         type:"GET",
         url:"../php/statsAdmin.php",
@@ -11,8 +10,7 @@ $(document).ready(function(){
             var AX = JSON.parse(respAX);
             if (AX.error) {
                 $.notify("Hubo un error :(","error");
-            }else{
-                $.notify("exito","success");
+            }else{                
 
                 $( "#numAlumnos" ).html(AX.data.numAlumnos);
                 $( "#numMaterias" ).html(AX.data.numMaterias);

@@ -6,6 +6,11 @@
         header("location:../login.html");
     }
 ?>
+<script src="../js/html2pdf.bundle.min.js"></script>
+<script src="../js/AdminJS/generadorReporte.js"></script>
+<div id="reporteAlumnos">
+
+
           <!-- Page Heading -->
           <div class="row mb-4">
             <div class="col-sm-10">
@@ -19,10 +24,10 @@
 
             </div>
             <div class="col-sm-1">
-              <a href="#" class=" btn btn-primary ">
+              <button class=" btn btn-primary " id="descargarReporteAlumnos">
                 <i class="fas fa-download  "></i>
                 Generar Reporte
-              </a>
+            </button>
             </div>
 
           </div>
@@ -88,7 +93,7 @@
               </div>
             </div>
           </div>
-
+</div>
           <script>
               $("#agregarAlumnoBtn").click(function(){
                    $( "#adminContent" ).load( "AgregarAlumno.php",function(){}).hide().fadeIn();
