@@ -32,7 +32,11 @@
           </div>
           <div class="col-lg-4"></div>
           <div class="col-lg-4">
-              <input type="submit" value="Registrar Materias" id="RegistrarMateriasBtn" class="btn btn-success btn-user">
+            <?php if(verificarExistencia($correo,$conn)==0){
+              echo "<input type='submit' value='Registrar Materias' id='RegistrarMateriasBtn' class='btn btn-success btn-user'>";
+              }else{
+                echo "<p>Bien, ya registraste tus materias, en el apartado izquierdo en 'Ver lista' podr&aacute;s ver las materias que registraste";
+              }?>  <br>              
           </div>
         </div>
         <div class="card shadow mb-4">                

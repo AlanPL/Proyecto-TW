@@ -19,6 +19,11 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Empezar lista</span></button>
       </li>
+      <li class="nav-item">
+        <button  class="btn btn-link nav-link" id="BotonLista">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Ver lista</span></button>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">

@@ -48,7 +48,7 @@
     <div id="content-wrapper" class="d-flex flex-column">
       <!-- Main Content -->
       <div id="content">
-            <?php include("../Admin/topbar.php"); ?>
+            <?php include("topbarAl.php"); ?>
         <!-- Begin Page Content -->
         <div class="container-fluid" id="ContenidoAlumno">
         </div>

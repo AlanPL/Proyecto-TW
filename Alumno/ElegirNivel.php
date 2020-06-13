@@ -66,4 +66,19 @@
     $boleta = $row["contrasena"];
     echo $boleta;
    }
+
+   function verificarExistencia($correo,$conn){
+    $sql = "select * from `alumno` where correo='".$correo."'";
+    $res=mysqli_query($conn,$sql) or die(mysql_error());
+    $row = mysqli_fetch_assoc($res);    //obtener una fila de resultado
+    $boleta = $row["boleta"];
+    $consulta= "SELECT * FROM horario WHERE boleta='".$boleta."'";
+    $res1=mysqli_query($conn,$consulta) or die(mysql_error());
+    $existencia=mysqli_num_rows($res1);
+    if($existencia==0){
+      return 0;
+    }else{
+      return 1;
+    }
+   }
 ?>
