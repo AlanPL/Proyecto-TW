@@ -17,18 +17,19 @@ function informarItemsElegidos(elemento) {
             }
         }
     };
-    document.formulario2.cajaTexto.value = elegidos;
-    if(elegidos<1){
-        document.formulario3.boton.disabled=1;
-    }else{
-        document.formulario3.boton.disabled=0;
-    }
+    document.formRegistrarMaterias.cajaTexto.value = elegidos;
+    //if(elegidos<1){
+      //  document.getElementsByName(boton).disabled=1;
+    //}else{
+  //      document.getElementsByName(boton).disabled=0;
+//    }
 }
 
+/*
 function mi_alerta(){
     var mensaje;
     var opcion = confirm("¿Seguro que ya elegiste todas tus materias?, esta acción no se puede deshacer");
     if (opcion == true) {
         document.body.innerHTML += "<a href='alumno.php?page=RegistroCompleto'></a>";
     }
-}
+}*/
