@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var direcciones = [ "InicioAlumno.php", "Materias.php", "PerfilAl.php" ];
+    var direcciones = [ "InicioAlumno.php", "Materias.php", "RegistroCompleto.php", "PerfilAl.php" ];
 
     $( "#ContenidoAlumno" ).load( direcciones[0],function(){}).hide().fadeIn();
 
@@ -10,7 +10,10 @@ $(document).ready(function(){
    $("#BotonMaterias").click(function(){
         $( "#ContenidoAlumno" ).load( direcciones[1],function(){}).hide().fadeIn();
    })
-   $("#BotonPerfilAl").click(function(){
+   $("#BotonLista").click(function(){
         $( "#ContenidoAlumno" ).load( direcciones[2],function(){}).hide().fadeIn();
+   })
+   $("#BotonPerfilAl").click(function(){
+        $( "#ContenidoAlumno" ).load( direcciones[3],function(){}).hide().fadeIn();
    })
 });
