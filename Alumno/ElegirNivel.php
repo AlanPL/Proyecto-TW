@@ -4,20 +4,23 @@
     $res=mysqli_query($conn,$sql) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
     $i=0;
     while($row = mysqli_fetch_assoc($res)){
-      $title[$i]=$row["Materia"];
+      $title[$i]=$row["Nombre"];
       $codtit[$i]=$row["Id_materia"];?>
       <?php $sqlx = "select * from materia where Id_materia='".$codtit[$i]."'";
         $resx=mysqli_query($conn, $sqlx) or die(mysql_error());
         $j=0;
         $cero=0;
         while($rowx = mysqli_fetch_assoc($resx)){
-          $item[$j]=$rowx["Materia"];
+          $item[$j]=$rowx["Nombre"];
           $coditem[$j]=$rowx["Id_materia"];?>
           <div class="custom-control custom-checkbox small">
             <input type="checkbox" class="custom-control-input" id="<?php echo $item[$j];?>" name="checkbox[]" onClick="informarItemsElegidos('checkbox[]')" value="<?php echo $codtit[$i];?>">          <!--// asignamos el codigo de item-->
             <label class="custom-control-label" for="<?php echo $item[$j];?>"><nbsp></nbsp><h6><?php echo $item[$j];?> <!-- imprimimos el nombre del item--></h6><br   /></label>
           </div>
         <?php $j++;
+        //if (isset($_POST['checkbox'])){
+          //echo $_POST['checkbox']; // Muestra el valor de la casilla de verificación marcada.
+        //}
         }
         mysqli_free_result($resx);  ?> <!-- se libera la consulta-->
       <?php $i++;
@@ -36,7 +39,7 @@
     }else{
       echo "<p><b>Por favor seleccione al menos una opción.</b></p>";
     }*/
-  }
+   }
 
   function conseguirNombre($correo,$conn){
     $sql = "select * from `alumno` where correo='".$correo."'";
@@ -56,16 +59,11 @@
     echo $boleta;
    }
 
-  function envioMateria(){
-    $boleta='2010002';
-    $materia =  stripslashes ($_POST["checkbox"]);
-    IF ($materia) {
-      for ($i=0;$i<count($materia);$i++){
-        $query = "INSERT INTO materiaselegidas (boleta,id_Materia,recurse)
-          VALUES ($boleta, '".$materia[$i]."', '0')";
-        $result = $conn->query($query);
-        if (!$result) die($conn->error);
-      }
-    }
-  }
+  function conseguirContrasena($correo,$conn){
+    $sql = "select * from `alumno` where correo='".$correo."'";
+    $res=mysqli_query($conn,$sql) or die(mysql_error());
+    $row = mysqli_fetch_assoc($res);    //obtener una fila de resultado
+    $boleta = $row["contrasena"];
+    echo $boleta;
+   }
 ?>

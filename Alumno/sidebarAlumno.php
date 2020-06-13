@@ -1,23 +1,23 @@
 
-
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="alumno.php">
-        <div class="sidebar-brand-text mx-3">Administracion SEIIAE </div>
-      </a>
 
+      <li class="nav-item active">
+        <button  class="btn btn-link nav-link" id="BotonInicioAlumno">
+          <div class="sidebar-brand-text mx-3">Administraci&oacute;n SEIIAE</div></button>
+      </li>
 
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item active">
-        <a class="nav-link" href="alumno.php?page=Materias">
+      <li class="nav-item">
+        <button  class="btn btn-link nav-link" id="BotonMaterias">
           <i class="fas fa-fw fa-table"></i>
-          <span>Empezar lista</span></a>
+          <span>Empezar lista</span></button>
       </li>
 
       <!-- Divider -->
@@ -25,16 +25,10 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="alumno.php?page=Perfil">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Perfil</span></a>
+        <button  class="btn btn-link nav-link" id="BotonPerfilAl">
+          <i class="fas fa-users"></i>
+          <span>Perfil</span></button>
       </li>
-
-    <li class="nav-item">
-       <a class="nav-link" href="../php/cerrarSesion.php">
-          <i class="fas fa-fw fa-cog"></i>
-      <span>Cerrar sesi&oacute;n</span></a>
-    </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
