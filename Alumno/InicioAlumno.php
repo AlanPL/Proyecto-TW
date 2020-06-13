@@ -1,4 +1,15 @@
-
+<?php
+  if (!isset($_SESSION)) {
+    session_start();
+    include '../php/conexion.php';
+    include 'ElegirNivel.php';
+    $conn=conectar();
+    $correo=$_SESSION["correo"];
+  }
+  if( !isset($_SESSION["correo"])){
+    header("location:../login.html");
+  }
+?>
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -25,7 +36,7 @@
                   <div class="text-center">
                     <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="../img/undraw_posting_photo.svg" alt="">
                   </div>
-                  <p>Bienvenido Nombre de usuario</p>
+                  <p>Bienvenido <?php conseguirNombre($correo,$conn); ?></p>
                 </div>
               </div>
             </div>
