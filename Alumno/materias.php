@@ -28,12 +28,12 @@
         <input name="boletaAlumno" type="hidden" value="<?php echo $boleta;?>">
         <div class="row">
           <div class="col-lg-4">
-              <h4>Materias seleccionadas: <input type="text" id="cajaTexto" class="texto" value="0" disabled> / 7</h4>        
+              <h4>Materias seleccionadas: <input type="text" id="cajaTexto" name="cajaTexto" class="texto" value="0" disabled> / 7</h4>        
           </div>
           <div class="col-lg-4"></div>
           <div class="col-lg-4">
             <?php if(verificarExistencia($correo,$conn)==0){
-              echo "<input type='submit' value='Registrar Materias' id='RegistrarMateriasBtn' class='btn btn-success btn-user'>";
+              echo "<input type='submit' value='Registrar Materias' id='RegistrarMateriasBtn' name='RegistrarMateriasBtn' class='btn btn-success btn-user' disabled>";
               }else{
                 echo "<p>Bien, ya registraste tus materias, en el apartado izquierdo en 'Ver lista' podr&aacute;s ver las materias que registraste";
               }?>  <br>              

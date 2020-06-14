@@ -37,10 +37,11 @@
             </div>
             <div class='col-lg-3'></div>
             <div class='col-lg-3'>
-              <button class='btn btn-warning' id='GenerarReporte'>
-                <i class='fas fa-download'></i>
-                Generar Reporte
-              </button>
+              <form action='PDFAl.php' target='_blank'>
+                <button class='btn btn-warning' id=´'reportePDF'>
+                  <i class='fas fa-download'></i> Generar Reporte
+                </button>
+              </form>
             </div>
           </div><br>
           <div class='text-center'>
