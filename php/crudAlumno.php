@@ -18,7 +18,7 @@
             break;
     }
 
-    function registrarMaterias(){
+        function registrarMaterias(){
         $con=conectar();
         //$boleta=conseguirBoleta($correo,$con);
         $boleta = $_POST['boletaAlumno'];
@@ -28,6 +28,19 @@
                 print_r($Id);
                 foreach($Id as $checks => $checked){
                     $selected = $checked;
+                    $sql1 = "SELECT * FROM horario WHERE boleta='".$boleta."' AND Id_materia='".$selected."'";
+                    $result=mysqli_query($con,$sql1) or die(mysql_error()); // $conn es la instancia a la conexion previa a la BD para mas informacion AQUI
+                    $row = mysqli_fetch_assoc($result);
+                    $recurse=$row["recurse"];
+                    if($recurse==0){
+                        $recurse='1';
+                    }else if($recurse=='1'){
+                        $recurse='2';
+                    }else if($recurse=='2'){
+                        $recurse='3';
+                    }else{
+                        $recurse='0';
+                    }
             $consulta = $con->prepare("INSERT INTO horario ( boleta, Id_materia,recurse ) VALUES (?, ?, ?)");
             $consulta -> bind_param('sss', $boleta, $selected,$recurse);
             if ($consulta -> execute() ) {
@@ -74,7 +87,7 @@
             $consulta = $con->prepare("UPDATE alumno SET correo=? WHERE boleta=?");
             $consulta -> bind_param('ss', $correoN, $boleta);
             if ($consulta -> execute() ) {
-                       //header("location:../Admin/admin.php?page=AgregarMateria&success=true");
+                       //header("location:..login.html");
                        echo 1;
                     }else{
                         //header("location:../Admin/admin.php?page=AgregarMateria&success=false");
