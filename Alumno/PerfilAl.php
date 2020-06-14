@@ -61,9 +61,10 @@
                           </a>
                         </nav>
                       <div class="card-body" id="correo" hidden="true">
-                        <input type="text" class="form-control form-control-user" name="CorreoNuevo" placeholder="Correo nuevo">
+                        <input type="email" class="form-control form-control-user" name="CorreoNuevo" placeholder="Correo nuevo">
                         <br>
-                        <input type="submit" value="Guardar Cambios" id="EditarCorreoBtn" class="btn btn-warning btn-user">
+                        <input type="submit" value="Guardar Cambios" id="EditarCorreoBtn" class="btn btn-warning btn-user"><br><br>
+                        <h6 class="text-gray-500">*Una vez oprimido el bot&oacute;n, se cerrar&aacute; la sesi&oacute;n para efectuar los cambios</h6>
                       </div>
                     </div>
                   </div> 
@@ -89,7 +90,7 @@
                           </a>
                         </nav>
                       <div class="card-body" id="contrasena" hidden="true">
-                        <input type="text" class="form-control form-control-user" name="ContrasenaNueva" placeholder="Contrase&ntilde;a nueva">
+                        <input type="password" class="form-control form-control-user" name="ContrasenaNueva" placeholder="Contrase&ntilde;a nueva">
                         <br>
                         <input type="submit" value="Guardar Cambios" id="EditarContrasenaBtn" class="btn btn-warning btn-user">
                       </div>

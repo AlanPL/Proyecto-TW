@@ -10,7 +10,10 @@
     header("location:../login.html");
   }
 ?>
+<script src="../js/AlumnoJS/ReporteAl.js"></script>
+
         <!-- Begin Page Content -->
+        <div id="reporteMaterias">
 <div id="wrapper">
   <div id="content-wrapper" class="d-flex flex-column">
     <div class="container-fluid">
@@ -28,7 +31,18 @@
          <h6 class='m-0 font-weight-bold text-primary'>Registro completado</h6>
          </div>
          <div class='card-body'>
-          <p>Gracias por tomarte el tiempo de llenar el registro.</p>
+          <div class='row'>
+            <div class='col-lg-6'>
+              <p>Gracias por tomarte el tiempo de llenar el registro.</p>
+            </div>
+            <div class='col-lg-3'></div>
+            <div class='col-lg-3'>
+              <button class='btn btn-warning' id='GenerarReporte'>
+                <i class='fas fa-download'></i>
+                Generar Reporte
+              </button>
+            </div>
+          </div><br>
           <div class='text-center'>
           <table class='table table-bordered' id='dataTable' width='100%'' cellspacing='0'>
                   <thead>
@@ -64,5 +78,6 @@
          } ?>
     </div>
   </div>
+</div>
 </div>
 <script src="../js/AlumnoJS/InfoMateriasElegidas.js"></script>
