@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var direcciones = [ "InicioAlumno.php", "Materias.php", "RegistroCompleto.php", "PerfilAl.php" ];
+    var direcciones = [ "InicioAlumno.php", "materias.php", "RegistroCompleto.php", "PerfilAl.php" ];
 
     $( "#ContenidoAlumno" ).load( direcciones[0],function(){}).hide().fadeIn();
 
