@@ -16,13 +16,14 @@ function informarItemsElegidos(elemento) {
                 --elegidos;
             }
         }
-    };
-    document.formRegistrarMaterias.cajaTexto.value = elegidos;
-    //if(elegidos<1){
-      //  document.getElementsByName(boton).disabled=1;
-    //}else{
-  //      document.getElementsByName(boton).disabled=0;
-//    }
+    }
+    document.getElementById("cajaTexto").value = elegidos;
+    if(elegidos<1){
+        document.getElementById("RegistrarMateriasBtn").disabled=1;
+    }else{
+        document.getElementById("RegistrarMateriasBtn").disabled=0;
+    }
+
 }
 
 /*
