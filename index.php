@@ -21,14 +21,14 @@
 <body id="imagen">
     <header id="main-header">
     
-        <a id="logo-header" href="index.html">
+        <a id="logo-header" href="index.php">
             <span class="site-name">PRE-REGISTRO ESCOM</span>
             <span class="site-desc">Iniciar sesion</span>
         </a> <!-- / #logo-header -->
 
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
             </ul>
         </nav><!-- / nav -->
 
@@ -41,10 +41,10 @@
                <p class="text-center">
                    Se realizo esta propuesta con el objetivo de conocer las materias a cursar el proximo semestre por el estudiante 
                </p>
-               <a href="login.html" class="btn btn-md text-center btn-info">Iniciar sesion</a>
+               <a href="login.php" class="btn btn-md text-center btn-info">Iniciar sesion</a>
                <br>
                <br>
-               <a href="registro.html" class="btn btn-md text-center btn-info">Crear cuenta</a>
+               <a href="registro.php" class="btn btn-md text-center btn-info">Crear cuenta</a>
             </div>
         </div>
     </div>
@@ -57,3 +57,4 @@
 </body>
 
 </html>
+
