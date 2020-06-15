@@ -3,7 +3,7 @@ $(document).ready(function(){
     $.validator.addMethod("StrongPassword",function(value){
         return /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(value);
 
-    },"Please Enter Strong password");
+    },"Por favor ingrese una contraseña mas segura");
     
     $.validator.addMethod("NumeroDeBoleta",function(value){
         return /((((200|201)([0-9]))|((199)(3|4|5|6|7|8|9)))([0-9]+))|((2020)([0-9]+))/.test(value);
@@ -32,12 +32,10 @@ $(document).ready(function(){
                 NumeroDeBoleta:true
             },
             primerApe:{
-                required:true,
-                nowhitespace:true
+                required:true
             },
             segundoApe:{
-                required:true,
-                nowhitespace:true
+                required:true
             },
             fechaNac:{
                 required:true,
@@ -56,12 +54,21 @@ $(document).ready(function(){
             nombre:{
                 required:"Nombre es obligatorio"
             },
+            primerApe:{
+                required:"Apellido paterno es obligatorio"
+            },
+            segundoApe:{
+                required:"Apellido materno es obligatorio"
+            },
             correo:{
                 required:"Correo es obligatorio",
                 email:"Correo invalido"
             },
-            contrasenia:{
+            contrasena:{
                 required:"Ingrese contrasenia"
+            },
+            fechaNac:{
+                required:"Ingrese su fecha de nacimiento"
             },
             boleta:{
                 required:"Ingrese boleta"
