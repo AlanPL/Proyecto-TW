@@ -20,7 +20,7 @@ $(document).ready(function(){
                 required:true,
                 email:true
             },
-            contrasenia:{
+            contrasena:{
                 required:true,
                 StrongPassword:true
             },
@@ -31,13 +31,17 @@ $(document).ready(function(){
                 maxlength:10,
                 NumeroDeBoleta:true
             },
-            apellido_1:{
+            primerApe:{
                 required:true,
                 nowhitespace:true
             },
-            apellido_2:{
+            segundoApe:{
                 required:true,
                 nowhitespace:true
+            },
+            fechaNac:{
+                required:true,
+                nowhitespace:true,
             }
         },
         highlight:function(element){
@@ -62,6 +66,60 @@ $(document).ready(function(){
             boleta:{
                 required:"Ingrese boleta"
             }
-        }
+        },
+        submitHandler: subform
+        /*onValid:function(e){
+            e.preventDefault();
+            $.ajax({
+                url: "php/registro_AX.php",
+                method: "POST",
+                data: $("#form1").serialize(),
+                cache: false,
+                success:function(respAX){
+                    var AX = JSON.parse(respAX);
+                    var titulo = "<h2>CRUD - TW - 20202</h2>";
+                    $.alert({
+                        title:titulo,
+                        content:AX.msj,
+                        icon:"fas fa-cogs fa-2x",
+                        theme:"light",
+                        onDestroy:function(){
+                            if(AX.cod == 0 || AX.cod == 2){
+                                location.reload();
+                            }
+                            if(AX.cod == 1){
+                                location.replace("./index.php");
+                            }
+                        }
+                    });
+                }
+            });
+        }*/
     });
+    function subform(){
+            var datos = $("#form1").serialize();
+            $.ajax({
+                url: "php/RegistroDeUsuarios.php",
+                method: "POST",
+                data: datos,//$("#form1").serialize(),
+                cache: false,
+                success: function(respAX){
+                    var AX = JSON.parse(respAX);
+                    var titulo = "<h2>CRUD - TW - 20202</h2>";
+                    $.alert({
+                        title: titulo,
+                        content: AX.msj,
+                        theme: "supervan",
+                        onDestroy: function(){
+                            if(AX.cod == 0 || AX.cod == 2){
+                                location.reload();
+                            }
+                            if(AX.cod == 1){
+                                location.replace("index.php");
+                            }
+                        }
+                    });
+                }
+            });
+        }
 });
