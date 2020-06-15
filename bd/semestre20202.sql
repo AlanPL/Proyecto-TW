@@ -81,6 +81,9 @@ INSERT INTO `alumno` (boleta,nombre,primerApe,segundoApe,correo,fechaNac,contras
   ('2019149094', 'Alan', 'Estrada', 'Campos', 'EsAlCa@gmail.com', '1999-01-10', 'EOdleCENSo', '2020-06-113','nada'),
   ('2019149761', 'Esau', 'Rivera', 'Rodriguez', 'EsauRivera021@hotmail.com', '1999-11-11', 'lInORtIoRc', '2020-06-10','nada'),
   ('2019149973', 'Adolfo', 'Martinez', 'Chavez', 'MMCT5634@gmail.com', '1999-08-31', 'TIOUSaNTeR', '2020-06-10','nada'),
+  ('2018540917', 'Joaquin', 'Saldivar', 'Salazar', 'JoaquinMMxx1574@gmail.com', '1998-10-01', 'ContEmail12456', '2020-06-113','nada'),
+  ('2018726183', 'Jessica', 'Esqivel', 'Lopez', 'EsqJes@gmail.com', '1998-04-15', '04151998Nacimiento', '2020-06-10','nada'),
+  ('0751239428', 'Macario', 'Jimenez', 'Cabrera', 'Macario@gmail.com', '1998-09-27', 'LoRecordareFacil', '2020-06-09','nada'),
   ('2015630190', 'Blanca', 'Ortiz', 'Estela', 'correofacil123@gmail.com', '1999-08-16', 'contrasenaFacil123', '2020-06-10','nada');
 /*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
 /*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
