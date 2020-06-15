@@ -70,9 +70,18 @@ CREATE TABLE `alumno` (
 
 LOCK TABLES `alumno` WRITE;
 INSERT INTO `alumno` (boleta,nombre,primerApe,segundoApe,correo,fechaNac,contrasena,auditoria,estado) 
-  VALUES ('2019630149', 'Wade', 'paterno', 'materno', 'correo@alumno.com', '1999-05-21', '12345678', '2020-06-15','nada'),
-  ('2354510', 'Bob', 'paterno', 'materno', 'ejemplo@correo.com', '1999-05-21', '87654321', '2020-06-15','nada'),
-  ('1278452', 'Pedro', 'paterno', 'materno', 'correo@gmail.com', '1999-05-21', 'constrasena', '2020-06-15','nada');
+  VALUES ('2019630149', 'Lorenza', 'Doval', 'Bertran', 'correo@alumno.com', '1999-05-21', '12345678', '2020-06-15','nada'),
+  ('2354510', 'Santiago', 'Godino', 'Busquets', 'ejemplo@correo.com', '1996-12-13', 'sAuRATErfE', '2020-06-15','nada'),
+  ('1278452', 'Laura', 'Salinas', 'Gutierrez', 'correo@gmail.com', '1996-02-19', 'ENDisHparo', '2020-06-15','nada'),
+  ('1548656201', 'Alvaro', 'Gomez', 'Gomez', 'alvaroABCD65@hotmail.com', '1997-06-28', 'sTiNdERELi', '2020-06-14','nada'),
+  ('2020143751', 'Maria', 'Alvares', 'Sanchez', 'MAS0617@hotmail.com', '2000-06-17', 'EzOiStIoNy', '2020-06-14','nada'),
+  ('2020143124', 'Samuel', 'Raya', 'Lima', 'Raya23@gmail.com', '2000-03-23', 'lOGRivesOu', '2020-06-14','nada'),
+  ('2020143750', 'Catarina', 'Lugo', 'Gallardo', 'CatiLugo@outlook.com', '2000-03-01', 'CIstrOGYrI', '2020-06-13','nada'),
+  ('2019143402', 'Victoria', 'Perla', 'Lule', 'PVicky987@yahoo.com', '1999-02-27', 'AtOlInDYst', '2020-06-13','nada'),
+  ('2019149094', 'Alan', 'Estrada', 'Campos', 'EsAlCa@gmail.com', '1999-01-10', 'EOdleCENSo', '2020-06-113','nada'),
+  ('2019149761', 'Esau', 'Rivera', 'Rodriguez', 'EsauRivera021@hotmail.com', '1999-11-11', 'lInORtIoRc', '2020-06-10','nada'),
+  ('2019149973', 'Adolfo', 'Martinez', 'Chavez', 'MMCT5634@gmail.com', '1999-08-31', 'TIOUSaNTeR', '2020-06-10','nada'),
+  ('2015630190', 'Blanca', 'Ortiz', 'Estela', 'correofacil123@gmail.com', '1999-08-16', 'contrasenaFacil123', '2020-06-10','nada');
 /*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
 /*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -134,8 +143,12 @@ CREATE TABLE `horario` (
 
 LOCK TABLES `horario` WRITE;
 INSERT INTO `horario` (boleta,Id_materia,recurse) VALUES ('2019630149', '201', 1), ('2019630149','202', 1), ('2019630149','302', 2),  
-  ('2354510', '201', 1),('2354510', '204', 2),('2354510', '304', 2),('1278452', '202',0),('1278452', '201', 1),('1278452', '302', 0);
-/*!40000 ALTER TABLE `horario` DISABLE KEYS */;
+  ('2354510', '201', 1),('2354510', '204', 2),('2354510', '304', 2),
+  ('1278452', '202',0),('1278452', '201', 1),('1278452', '302', 0),
+  ('2020143751','405',2), ('2020143751','505',1), ('2020143751','402',1), ('2020143751','305',1), ('2020143751','301',1),
+  ('2019149761','202',0),
+  ('2020143750','106',2), ('2020143750','203',1), ('2020143750','203',1), ('2020143750','402',0), ('2020143750','506',0),
+  ('2019149973','403',2), ('2019149973','405',2), ('2019149973','501',1), ('2019149973','502',1), ('2019149973','503',0), ('2019149973','504',0), ('2019149973','506',0);/*!40000 ALTER TABLE `horario` DISABLE KEYS */;
 /*!40000 ALTER TABLE `horario` ENABLE KEYS */;
 UNLOCK TABLES;
 
