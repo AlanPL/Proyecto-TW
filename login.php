@@ -30,11 +30,11 @@
             <div class="col-sm-6 mx-auto modal-content">
                 <form  id="form1" autocomplete="off" method="post">
                   <br>
-                   <label for="boleta">Boleta</label>
-                    <input type="text" name="boleta" id="boleta" placeholder="Inserta aqui tu boleta" class="form-control">
+                   <label for="correo">Correo electronico</label>
+                    <input type="text" name="correo" id="correo" placeholder="Inserta aqui tu email" class="form-control">
                     <br>
                     <label for="contrasena">Contraseña</label>
-                    <input type="text" name="contrasena" id="contrasena" placeholder="Escribe tu contrasenia" class="form-control">
+                    <input type= password name="contrasena" id="contrasena" placeholder="Escribe tu contrasenia" class="form-control">
                     <br>
                     <input type="submit" value="Entrar" class="btn btn-info btn-block">
                 </form>
