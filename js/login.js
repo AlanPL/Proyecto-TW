@@ -5,15 +5,16 @@ $(document).ready(function(){
 
     },"Por favor, ingrese una contrasenia mas segura");*/
     
-    $.validator.addMethod("NumeroDeBoleta",function(value){
+    /*$.validator.addMethod("NumeroDeBoleta",function(value){
         return /((((200|201)([0-9]))|((199)(3|4|5|6|7|8|9)))([0-9]+))|((2020)([0-9]+))/.test(value);
-    },"Ingrese su numero de boleta correctamente");
+    },"Ingrese su numero de boleta correctamente");*/
     
     
     $("#form1").validate({
         rules:{
-            contrasena:{
+            correo:{
                 required:true,
+                email:true
                 //StrongPassword:true
             },
             boleta:{
@@ -34,10 +35,11 @@ $(document).ready(function(){
         },
         messages:{
             contrasena:{
-                required:"Ingrese contrasenia"
+                required:"Ingrese contrasenia",
             },
-            boleta:{
-                required:"Ingrese boleta"
+            correo:{
+                required:"Ingrese su correo electronico",
+                email:"Ingrese un correo valido"
             }
         },
         submitHandler: subform
