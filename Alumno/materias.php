@@ -7,7 +7,7 @@
         $correo=$_SESSION["correo"];
     }
     if( !isset($_SESSION["correo"])){
-        header("location:../login.html");
+        header("location:../login.php");
     }
 ?>
 <div id="wrapper">
