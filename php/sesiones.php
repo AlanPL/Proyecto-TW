@@ -35,7 +35,7 @@
             header("Location: ../Alumno/alumno.php");
             echo "<script>alert('Usuario No Valido');</script>";
         }else{
-            header("Location: ../login.html");
+            header("Location: ../login.php");
         }
     }
     $con->close();
