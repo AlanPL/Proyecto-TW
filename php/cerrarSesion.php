@@ -6,5 +6,5 @@
 	unset ($SESSION['nombreSesion']);
 	session_destroy();
 	//redireccionamos a la pantalla del login
-	header('Location: ../index.html');
+	header('Location: ../index.php');
 ?>
