@@ -51,6 +51,15 @@
                         echo 0;
                     }
                 }
+                $preregistro = $con->prepare("UPDATE alumno SET estado='1' WHERE boleta=?");
+                $preregistro -> bind_param('s', $boleta);
+                if ($preregistro -> execute() ) {
+                       //header("location:../Admin/admin.php?page=AgregarMateria&success=true");
+                       echo 1;
+                    }else{
+                        //header("location:../Admin/admin.php?page=AgregarMateria&success=false");
+                        echo 0;
+                    }
         }else {
             //header("location:../Admin/admin.php?page=AgregarMateria&success=false");
             echo 0;
