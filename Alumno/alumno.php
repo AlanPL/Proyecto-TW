@@ -2,7 +2,7 @@
     session_start();
 
     if( !isset($_SESSION["correo"])){
-        header("location:../login.html");
+        header("location:../login.php");
     }else{
         //La sesion existe SSI pasó por el login y los datos fueron correctos
         $correo = $_SESSION["correo"];
